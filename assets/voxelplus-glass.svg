@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="100%" height="auto">
+  <defs>
+    <!-- Card Base Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e172a"/>
+      <stop offset="50%" stop-color="#131e38"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <!-- Glass Surface -->
+    <linearGradient id="glassSurface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+
+    <!-- Glass Specular Rim -->
+    <linearGradient id="specularRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="40%" stop-color="#93c5fd" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0.12"/>
+    </linearGradient>
+
+    <!-- Liquid Wave Gradient -->
+    <linearGradient id="waveFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.18"/>
+    </linearGradient>
+
+    <!-- Feature Pill Surface -->
+    <linearGradient id="pillBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 26px;
+      letter-spacing: -0.3px;
+      fill: #ffffff;
+    }
+    .tagline-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      fill: #93c5fd;
+    }
+    .summary-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 13.5px;
+      line-height: 1.5;
+      fill: #cbd5e1;
+    }
+    .spec-header {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      fill: #94a3b8;
+    }
+    .spec-body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 600;
+      font-size: 12.5px;
+      fill: #f1f5f9;
+    }
+    .pill-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      fill: #e2e8f0;
+    }
+    .wave-drift {
+      animation: drift 15s ease-in-out infinite alternate;
+    }
+    @keyframes drift {
+      0% { transform: translateX(0px); }
+      100% { transform: translateX(-30px); }
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="960" height="260" rx="18" fill="url(#cardBg)"/>
+
+  <!-- Liquid Ambient Flow in Background -->
+  <g class="wave-drift">
+    <path d="M-20,130 C180,60 360,200 580,120 C760,50 870,170 1000,100 L1000,280 L-20,280 Z" fill="url(#waveFlow)"/>
+  </g>
+
+  <!-- Glass Card Main Panel -->
+  <rect x="18" y="16" width="924" height="228" rx="14" fill="url(#glassSurface)"/>
+  <rect x="18" y="16" width="924" height="228" rx="14" fill="none" stroke="url(#specularRim)" stroke-width="1.2"/>
+
+  <!-- App Logo with Translucent Frost Backing -->
+  <g transform="translate(42, 38)">
+    <rect width="112" height="112" rx="18" fill="#ffffff" fill-opacity="0.08" stroke="url(#specularRim)" stroke-width="1"/>
+    <image href="data:image/png;base64,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" x="8" y="8" width="96" height="96" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+
+  <!-- Title & Description Header -->
+  <g transform="translate(176, 46)">
+    <text x="0" y="22" class="title-text">Voxel⁺ <tspan font-weight="400" font-size="16" fill="#94a3b8">— Modern Minecraft Instance Launcher</tspan></text>
+    <text x="0" y="46" class="tagline-text">Free, offline instance launcher with loader-aware Gradle environments</text>
+    <text x="0" y="68" class="summary-text">Built with Electron, Vite &amp; TypeScript. Isolates configs, mods, and worlds per instance so they never conflict.</text>
+
+    <!-- Architecture & Capability Specs (Verified) -->
+    <g transform="translate(0, 88)">
+      <!-- Spec 1: Architecture -->
+      <g transform="translate(0, 0)">
+        <rect width="225" height="44" rx="8" fill="url(#pillBg)" stroke="url(#specularRim)" stroke-width="0.8"/>
+        <text x="14" y="17" class="spec-header">Architecture</text>
+        <text x="14" y="34" class="spec-body">Electron + Vite + TS</text>
+      </g>
+
+      <!-- Spec 2: Loaders -->
+      <g transform="translate(237, 0)">
+        <rect width="245" height="44" rx="8" fill="url(#pillBg)" stroke="url(#specularRim)" stroke-width="0.8"/>
+        <text x="14" y="17" class="spec-header">Mod Loaders</text>
+        <text x="14" y="34" class="spec-body">Fabric · Quilt · Forge · NeoForge</text>
+      </g>
+
+      <!-- Spec 3: Discovery & Runtimes -->
+      <g transform="translate(494, 0)">
+        <rect width="245" height="44" rx="8" fill="url(#pillBg)" stroke="url(#specularRim)" stroke-width="0.8"/>
+        <text x="14" y="17" class="spec-header">Content &amp; Runtime</text>
+        <text x="14" y="34" class="spec-body">Modrinth Browser · Auto Java</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom Verification Feature Chips -->
+  <g transform="translate(42, 196)">
+    <!-- Chip 1: Offline Execution -->
+    <g transform="translate(0, 0)">
+      <rect width="195" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#93c5fd" stroke-opacity="0.35" stroke-width="0.8"/>
+      <circle cx="14" cy="14" r="3.5" fill="#38bdf8"/>
+      <text x="26" y="18" class="pill-label">Offline Instance Execution</text>
+    </g>
+
+    <!-- Chip 2: Isolated Loom -->
+    <g transform="translate(207, 0)">
+      <rect width="205" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#c4b5fd" stroke-opacity="0.35" stroke-width="0.8"/>
+      <circle cx="14" cy="14" r="3.5" fill="#a78bfa"/>
+      <text x="26" y="18" class="pill-label">Per-Instance Loom &amp; Gradle</text>
+    </g>
+
+    <!-- Chip 3: Modpack Import -->
+    <g transform="translate(424, 0)">
+      <rect width="220" height="28" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#86efac" stroke-opacity="0.35" stroke-width="0.8"/>
+      <circle cx="14" cy="14" r="3.5" fill="#34d399"/>
+      <text x="26" y="18" class="pill-label">.mrpack &amp; .vpack Import Engine</text>
+    </g>
+
+    <!-- Chip 4: View Project Link -->
+    <g transform="translate(656, 0)">
+      <rect width="220" height="28" rx="14" fill="#ffffff" fill-opacity="0.1" stroke="#ffffff" stroke-opacity="0.4" stroke-width="0.8"/>
+      <text x="32" y="18" class="pill-label" font-weight="600" fill="#ffffff">Explore Repository ↗</text>
+    </g>
+  </g>
+</svg>

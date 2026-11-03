@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="100%" height="auto">
+  <defs>
+    <linearGradient id="cHeroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070710"/>
+      <stop offset="50%" stop-color="#0e0f21"/>
+      <stop offset="100%" stop-color="#040409"/>
+    </linearGradient>
+    <linearGradient id="cNeonLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <pattern id="cGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00f5ff" stroke-width="0.5" stroke-opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .c-name { font-family: 'Fira Code', monospace; font-weight: bold; font-size: 36px; fill: #00f5ff; letter-spacing: 1px; }
+    .c-desc { font-family: 'Fira Code', monospace; font-size: 13.5px; fill: #cbd5e1; }
+    .c-sub { font-family: 'Fira Code', monospace; font-size: 12.5px; fill: #f43f5e; font-weight: bold; }
+  </style>
+
+  <rect width="960" height="260" rx="8" fill="url(#cHeroBg)"/>
+  <rect width="960" height="260" rx="8" fill="url(#cGrid)"/>
+
+  <rect x="18" y="18" width="924" height="224" rx="6" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <polygon points="18,40 40,18 200,18 200,20 41,20 20,41" fill="#00f5ff"/>
+  <polygon points="942,220 920,242 760,242 760,240 919,240 940,219" fill="#a855f7"/>
+
+  <g transform="translate(54, 55)">
+    <rect width="160" height="24" rx="3" fill="#00f5ff" fill-opacity="0.15" stroke="#00f5ff" stroke-width="0.8"/>
+    <text x="10" y="16" font-family="'Fira Code', monospace" font-size="11" font-weight="bold" fill="#00f5ff">&gt; CYBERPUNK THEME</text>
+  </g>
+
+  <g transform="translate(54, 115)">
+    <text x="0" y="0" class="c-name">GHISDW <tspan font-weight="300" font-size="24" fill="#a855f7">// PEAKCODER</tspan></text>
+    <text x="0" y="32" class="c-desc">Autonomous Software Engineer &amp; System Architect.</text>
+    <text x="0" y="56" class="c-sub">&gt; STACK: NODE.JS // PYTHON // ELECTRON // FABRIC TOOLING</text>
+  </g>
+</svg>

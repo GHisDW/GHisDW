@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 230" width="100%" height="auto">
+  <defs>
+    <linearGradient id="linuxHeader" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2e3440"/>
+      <stop offset="100%" stop-color="#242933"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .term-title { font-family: 'Fira Code', monospace; font-size: 12px; fill: #d8dee9; font-weight: 500; }
+    .term-prompt { font-family: 'Fira Code', monospace; font-size: 13px; fill: #a3be8c; font-weight: bold; }
+    .term-path { font-family: 'Fira Code', monospace; font-size: 13px; fill: #88c0d0; font-weight: bold; }
+    .term-cmd { font-family: 'Fira Code', monospace; font-size: 13px; fill: #eceff4; }
+    .term-key { font-family: 'Fira Code', monospace; font-size: 12px; fill: #81a1c1; font-weight: 600; }
+    .term-val { font-family: 'Fira Code', monospace; font-size: 12px; fill: #e5e9f0; }
+    .cursor-blink { animation: blink 1s infinite steps(1); }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+  </style>
+
+  <!-- Terminal Window Base -->
+  <rect width="960" height="230" rx="8" fill="#1e222a" stroke="#3b4252" stroke-width="1.2"/>
+
+  <!-- Titlebar -->
+  <rect width="960" height="32" rx="8" fill="url(#linuxHeader)"/>
+  <rect y="24" width="960" height="8" fill="#242933"/>
+
+  <!-- Window Dots -->
+  <circle cx="20" cy="16" r="5" fill="#bf616a"/>
+  <circle cx="36" cy="16" r="5" fill="#ebcb8b"/>
+  <circle cx="52" cy="16" r="5" fill="#a3be8c"/>
+  <text x="430" y="20" class="term-title">ghisdw@linux-workstation:~</text>
+
+  <!-- Prompt Command -->
+  <g transform="translate(28, 60)">
+    <text x="0" y="0"><tspan class="term-prompt">ghisdw@workstation</tspan><tspan fill="#eceff4">:</tspan><tspan class="term-path">~</tspan><tspan fill="#eceff4">$ whoami --profile</tspan><tspan class="cursor-blink" fill="#88c0d0"> ▋</tspan></text>
+  </g>
+
+  <!-- Neofetch / Terminal Profile Output -->
+  <g transform="translate(28, 90)">
+    <!-- Tux ASCII Art / Logo Area -->
+    <g transform="translate(0, 0)">
+      <rect width="80" height="80" rx="6" fill="#2e3440" stroke="#4c566a" stroke-width="0.8"/>
+      <text x="16" y="50" font-size="36">🐧</text>
+    </g>
+
+    <!-- Specs List -->
+    <g transform="translate(100, 4)">
+      <text x="0" y="14"><tspan class="term-key">Developer: </tspan><tspan class="term-val">GHisDW (peakcoder)</tspan></text>
+      <text x="0" y="32"><tspan class="term-key">Languages: </tspan><tspan class="term-val">Node.js, Python, TypeScript, JavaScript</tspan></text>
+      <text x="0" y="50"><tspan class="term-key">Frameworks: </tspan><tspan class="term-val">Electron, Vite, Discord API, Fabric/Gradle</tspan></text>
+      <text x="0" y="68"><tspan class="term-key">Project: </tspan><tspan class="term-val">Voxel⁺ (Isolated singleplayer Minecraft launcher)</tspan></text>
+      <text x="0" y="86"><tspan class="term-key">Identity: </tspan><tspan class="term-val">Discord: DisGamerWorld · GitHub: GHisDW</tspan></text>
+    </g>
+
+    <!-- Color Palette Blocks -->
+    <g transform="translate(670, 24)">
+      <rect x="0" y="0" width="28" height="14" fill="#2e3440" rx="2"/>
+      <rect x="32" y="0" width="28" height="14" fill="#bf616a" rx="2"/>
+      <rect x="64" y="0" width="28" height="14" fill="#a3be8c" rx="2"/>
+      <rect x="96" y="0" width="28" height="14" fill="#ebcb8b" rx="2"/>
+      <rect x="128" y="0" width="28" height="14" fill="#81a1c1" rx="2"/>
+      <rect x="160" y="0" width="28" height="14" fill="#b48ead" rx="2"/>
+      <rect x="192" y="0" width="28" height="14" fill="#88c0d0" rx="2"/>
+
+      <rect x="0" y="18" width="28" height="14" fill="#4c566a" rx="2"/>
+      <rect x="32" y="18" width="28" height="14" fill="#d08770" rx="2"/>
+      <rect x="64" y="18" width="28" height="14" fill="#a3be8c" rx="2"/>
+      <rect x="96" y="18" width="28" height="14" fill="#ebcb8b" rx="2"/>
+      <rect x="128" y="18" width="28" height="14" fill="#5e81ac" rx="2"/>
+      <rect x="160" y="18" width="28" height="14" fill="#b48ead" rx="2"/>
+      <rect x="192" y="18" width="28" height="14" fill="#8fbcbb" rx="2"/>
+    </g>
+  </g>
+</svg>

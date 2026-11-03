@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 230" width="100%" height="auto">
+  <defs>
+    <linearGradient id="aeroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c192e"/>
+      <stop offset="50%" stop-color="#112644"/>
+      <stop offset="100%" stop-color="#081220"/>
+    </linearGradient>
+    <linearGradient id="glassOverlay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+    <linearGradient id="aeroRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="40%" stop-color="#7dd3fc" stop-opacity="0.4"/>
+      <stop offset="80%" stop-color="#a78bfa" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .text-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-weight: 700; font-size: 22px; fill: #ffffff; }
+    .text-sub { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13.5px; fill: #93c5fd; }
+    .text-prop { font-family: 'Fira Code', 'Consolas', monospace; font-size: 12px; fill: #7dd3fc; font-weight: 600; }
+    .text-val { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 13px; fill: #f1f5f9; }
+    .text-pill { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 11.5px; font-weight: 500; fill: #e2e8f0; }
+    .shimmer-bar { animation: slideShimmer 6s infinite ease-in-out; }
+    .float-aurora { animation: floatAero 10s infinite alternate ease-in-out; }
+    @keyframes slideShimmer {
+      0% { transform: translateX(-400px) skewX(-20deg); }
+      50%, 100% { transform: translateX(1100px) skewX(-20deg); }
+    }
+    @keyframes floatAero {
+      0% { transform: translateY(0px) scaleY(1); }
+      100% { transform: translateY(-12px) scaleY(1.08); }
+    }
+  </style>
+
+  <!-- Base Aero Container -->
+  <rect width="960" height="230" rx="16" fill="url(#aeroBg)"/>
+
+  <!-- Fluid Aurora Glow -->
+  <path class="float-aurora" d="M-40,140 Q240,60 480,130 T980,100 L980,230 L-40,230 Z" fill="url(#aurora)"/>
+
+  <!-- Frosted Acrylic Glass Plate -->
+  <rect x="16" y="16" width="928" height="198" rx="12" fill="url(#glassOverlay)"/>
+  <rect x="16" y="16" width="928" height="198" rx="12" fill="none" stroke="url(#aeroRim)" stroke-width="1.2"/>
+
+  <!-- Top Glass Highlight Specular Curve -->
+  <path d="M16,30 Q480,75 944,30 L944,16 Q480,45 16,16 Z" fill="#ffffff" fill-opacity="0.08"/>
+
+  <!-- Shimmer Light Sweep -->
+  <g clip-path="url(#cardClip)">
+    <rect class="shimmer-bar" x="0" y="16" width="200" height="198" fill="url(#shimmer)"/>
+  </g>
+
+  <!-- Card Header -->
+  <g transform="translate(40, 44)">
+    <circle cx="14" cy="14" r="14" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1.2"/>
+    <text x="9" y="19" font-family="'Segoe UI', sans-serif" font-size="14" fill="#38bdf8" font-weight="bold">👤</text>
+    <text x="38" y="18" class="text-title">GHisDW <tspan font-weight="400" font-size="16" fill="#94a3b8">/ peakcoder</tspan></text>
+    <text x="40" y="36" class="text-sub">Software Developer &amp; Desktop Systems Tinkerer</text>
+  </g>
+
+  <!-- Data Grid -->
+  <g transform="translate(40, 110)">
+    <!-- Col 1 -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="16" class="text-prop">SPECIALTIES</text>
+      <text x="0" y="36" class="text-val">Node.js · Python · TypeScript</text>
+    </g>
+
+    <!-- Col 2 -->
+    <g transform="translate(280, 0)">
+      <text x="0" y="16" class="text-prop">DOMAINS</text>
+      <text x="0" y="36" class="text-val">Electron Applications · Discord Bots</text>
+    </g>
+
+    <!-- Col 3 -->
+    <g transform="translate(580, 0)">
+      <text x="0" y="16" class="text-prop">FLAGSHIP BUILD</text>
+      <text x="0" y="36" class="text-val">Voxel⁺ (Isolated Minecraft Launcher)</text>
+    </g>
+  </g>
+
+  <!-- Status / Presence Bar -->
+  <g transform="translate(40, 172)">
+    <rect width="120" height="24" rx="12" fill="#ffffff" fill-opacity="0.08" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.5"/>
+    <circle cx="12" cy="12" r="3.5" fill="#38bdf8"/>
+    <text x="24" y="16" class="text-pill">Aero Glass v1.0</text>
+
+    <g transform="translate(135, 0)">
+      <rect width="150" height="24" rx="12" fill="#ffffff" fill-opacity="0.08" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.5"/>
+      <circle cx="12" cy="12" r="3.5" fill="#818cf8"/>
+      <text x="24" y="16" class="text-pill">Discord: DisGamerWorld</text>
+    </g>
+  </g>
+</svg>

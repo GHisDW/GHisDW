@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 230" width="100%" height="auto">
+  <defs>
+    <linearGradient id="cyberBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080811"/>
+      <stop offset="50%" stop-color="#0c0d1c"/>
+      <stop offset="100%" stop-color="#05050a"/>
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <pattern id="scanGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="16" y2="0" stroke="#00f5ff" stroke-opacity="0.08" stroke-width="0.8"/>
+      <line x1="0" y1="0" x2="0" y2="16" stroke="#00f5ff" stroke-opacity="0.08" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .hud-title { font-family: 'Fira Code', 'Courier New', monospace; font-weight: bold; font-size: 22px; fill: #00f5ff; letter-spacing: 1px; }
+    .hud-sub { font-family: 'Fira Code', monospace; font-size: 12px; fill: #f43f5e; font-weight: bold; letter-spacing: 1px; }
+    .hud-label { font-family: 'Fira Code', monospace; font-size: 11px; fill: #38bdf8; font-weight: 600; text-transform: uppercase; }
+    .hud-val { font-family: 'Fira Code', monospace; font-size: 12.5px; fill: #f1f5f9; }
+    .hud-accent { fill: #00f5ff; }
+    .scan-beam { animation: cyberScan 4s infinite linear; }
+    .glitch-box { animation: glitchPulse 2.5s infinite ease-in-out; }
+    @keyframes cyberScan {
+      0% { transform: translateY(0px); opacity: 0.2; }
+      50% { opacity: 0.8; }
+      100% { transform: translateY(210px); opacity: 0.2; }
+    }
+    @keyframes glitchPulse {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+
+  <rect width="960" height="230" rx="8" fill="url(#cyberBg)"/>
+  <rect width="960" height="230" rx="8" fill="url(#scanGrid)"/>
+
+  <!-- Neon Frame Cutouts -->
+  <rect x="12" y="12" width="936" height="206" rx="6" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+  <polygon points="12,30 30,12 180,12 180,14 31,14 14,31" fill="#00f5ff"/>
+  <polygon points="948,200 930,218 780,218 780,216 929,216 946,199" fill="#f43f5e"/>
+
+  <!-- Scanline Beam -->
+  <line class="scan-beam" x1="12" y1="12" x2="948" y2="12" stroke="#00f5ff" stroke-width="2" stroke-opacity="0.5"/>
+
+  <!-- Top Status Bar -->
+  <g transform="translate(36, 34)">
+    <text x="0" y="16" class="hud-title">GHISDW // PEAKCODER</text>
+    <rect x="290" y="4" width="120" height="18" rx="2" fill="#00f5ff" fill-opacity="0.15" stroke="#00f5ff" stroke-width="0.8"/>
+    <text x="298" y="17" class="hud-sub">&gt; CYBERDECK_OK</text>
+  </g>
+
+  <!-- HUD Specs Grid -->
+  <g transform="translate(36, 85)">
+    <!-- Box 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="280" height="55" rx="4" fill="#0f172a" fill-opacity="0.6" stroke="#00f5ff" stroke-width="0.8" stroke-opacity="0.4"/>
+      <text x="14" y="20" class="hud-label">CORE STACK [PRIMARY]</text>
+      <text x="14" y="40" class="hud-val">Node.js · Python · TS</text>
+    </g>
+
+    <!-- Box 2 -->
+    <g transform="translate(300, 0)">
+      <rect width="280" height="55" rx="4" fill="#0f172a" fill-opacity="0.6" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.4"/>
+      <text x="14" y="20" class="hud-label">DEPLOYMENT SUBSYSTEMS</text>
+      <text x="14" y="40" class="hud-val">Electron Apps · Discord Bots</text>
+    </g>
+
+    <!-- Box 3 -->
+    <g transform="translate(600, 0)">
+      <rect width="285" height="55" rx="4" fill="#0f172a" fill-opacity="0.6" stroke="#f43f5e" stroke-width="0.8" stroke-opacity="0.4"/>
+      <text x="14" y="20" class="hud-label">ACTIVE CONSTRUCT</text>
+      <text x="14" y="40" class="hud-val">Voxel⁺ (Minecraft Launcher)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Diagnostics -->
+  <g transform="translate(36, 175)">
+    <text x="0" y="15" font-family="'Fira Code', monospace" font-size="11" fill="#64748b">[TARGET: DISCORD] <tspan fill="#00f5ff">DisGamerWorld</tspan> · [NET: GITHUB] <tspan fill="#f43f5e">GHisDW</tspan> · [SYS: REPOSITORY VERIFIED]</text>
+  </g>
+</svg>

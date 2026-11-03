@@ -1,6 +1,61 @@
+<!-- ============================================================================== -->
+<!-- THEME SWITCHER INTERFACE (AERO GLASS / VISTA / CYBERPUNK / LINUX) -->
+<!-- ============================================================================== -->
+<details open>
+<summary><b>💠 Active Theme: Windows 7 Aero Glass (Default)</b> — <i>Click to expand other themes</i></summary>
+
 <p align="center">
-  <img src="assets/aero-hero.svg" width="100%" alt="GHisDW / peakcoder — Developer Profile" />
+  <img src="assets/aero-hero.svg" width="100%" alt="Aero Glass Theme Hero" />
 </p>
+
+### 👤 Identity Matrix
+<p align="center">
+  <img src="assets/whoami-aero.svg" width="100%" alt="Aero Glass Who Am I Card" />
+</p>
+
+</details>
+
+<details>
+<summary><b>🌊 Theme: Windows Vista Ultimate Aurora Edition</b></summary>
+
+<p align="center">
+  <img src="assets/vista-hero.svg" width="100%" alt="Windows Vista Aurora Theme Hero" />
+</p>
+
+### 👤 Identity Matrix
+<p align="center">
+  <img src="assets/whoami-vista.svg" width="100%" alt="Windows Vista Who Am I Card" />
+</p>
+
+</details>
+
+<details>
+<summary><b>⚡ Theme: Cyberpunk 2077 HUD Scan</b></summary>
+
+<p align="center">
+  <img src="assets/cyberpunk-hero.svg" width="100%" alt="Cyberpunk HUD Theme Hero" />
+</p>
+
+### 👤 Identity Matrix
+<p align="center">
+  <img src="assets/whoami-cyberpunk.svg" width="100%" alt="Cyberpunk Who Am I Card" />
+</p>
+
+</details>
+
+<details>
+<summary><b>🐧 Theme: Linux Terminal / TTY Workstation</b></summary>
+
+<p align="center">
+  <img src="assets/linux-hero.svg" width="100%" alt="Linux Terminal Theme Hero" />
+</p>
+
+### 👤 Identity Matrix
+<p align="center">
+  <img src="assets/whoami-linux.svg" width="100%" alt="Linux Terminal Who Am I Card" />
+</p>
+
+</details>
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-active-38bdf8?style=flat-square&logo=statuspal&logoColor=white" alt="Status" />

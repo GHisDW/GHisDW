@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 250" width="100%" height="auto">
+  <defs>
+    <!-- Vista Deep Obsidian Base -->
+    <linearGradient id="vistaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021217"/>
+      <stop offset="40%" stop-color="#03212b"/>
+      <stop offset="70%" stop-color="#08383a"/>
+      <stop offset="100%" stop-color="#021118"/>
+    </linearGradient>
+
+    <!-- Vista Emerald Aurora Glow -->
+    <linearGradient id="vistaAurora" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.4"/>
+      <stop offset="40%" stop-color="#06b6d4" stop-opacity="0.35"/>
+      <stop offset="70%" stop-color="#0284c7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <!-- Glass Specular Reflection -->
+    <linearGradient id="vistaGloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="51%" stop-color="#ffffff" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <linearGradient id="vistaRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.8"/>
+      <stop offset="35%" stop-color="#34d399" stop-opacity="0.6"/>
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .vista-title { font-family: 'Segoe UI', Tahoma, sans-serif; font-weight: bold; font-size: 20px; fill: #ffffff; }
+    .vista-sub { font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 13px; fill: #a7f3d0; }
+    .vista-label { font-family: 'Segoe UI', Tahoma, sans-serif; font-weight: 600; font-size: 11.5px; fill: #67e8f9; text-transform: uppercase; letter-spacing: 0.5px; }
+    .vista-value { font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 13px; fill: #f0fdfa; }
+    .aurora-motion { animation: auroraFlow 12s infinite alternate ease-in-out; }
+    @keyframes auroraFlow {
+      0% { transform: translate(0px, 0px) scale(1); }
+      100% { transform: translate(-20px, 10px) scale(1.05); }
+    }
+  </style>
+
+  <!-- Frame Background -->
+  <rect width="960" height="250" rx="10" fill="url(#vistaBg)"/>
+
+  <!-- Iconic Vista Flowing Aurora Waves -->
+  <path class="aurora-motion" d="M-20,170 C160,80 320,220 540,110 C740,10 840,160 1000,90 L1000,260 L-20,260 Z" fill="url(#vistaAurora)"/>
+  <path class="aurora-motion" d="M-20,100 C200,180 400,60 620,150 C800,220 900,90 1000,140 L1000,260 L-20,260 Z" fill="url(#vistaAurora)" opacity="0.6"/>
+
+  <!-- Windows Vista Style Window Frame -->
+  <rect x="12" y="12" width="936" height="226" rx="8" fill="#000000" fill-opacity="0.35" stroke="url(#vistaRim)" stroke-width="1.4"/>
+
+  <!-- Vista Gloss Header Bar -->
+  <rect x="13" y="13" width="934" height="40" rx="7" fill="url(#vistaGloss)"/>
+
+  <!-- Vista Window Controls (Close, Max, Min) -->
+  <g transform="translate(870, 22)">
+    <rect x="0" y="0" width="18" height="16" rx="2" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="0.8"/>
+    <line x1="4" y1="8" x2="14" y2="8" stroke="#ffffff" stroke-width="1.5"/>
+    <rect x="22" y="0" width="18" height="16" rx="2" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="0.8"/>
+    <rect x="26" y="4" width="10" height="8" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+    <rect x="44" y="0" width="22" height="16" rx="2" fill="#dc2626" fill-opacity="0.75" stroke="#f87171" stroke-width="0.8"/>
+    <path d="M49,4 L59,12 M59,4 L49,12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Vista Orb Icon + Title -->
+  <g transform="translate(30, 25)">
+    <circle cx="14" cy="10" r="10" fill="#0284c7" stroke="#67e8f9" stroke-width="1.2"/>
+    <text x="32" y="16" class="vista-title">Windows Vista Ultimate // System Properties: GHisDW</text>
+  </g>
+
+  <!-- Specular Arc Split (Signature Vista Glass Look) -->
+  <path d="M13,54 Q480,110 947,54 L947,13 Q480,70 13,13 Z" fill="#ffffff" fill-opacity="0.07"/>
+
+  <!-- Vista Properties Content -->
+  <g transform="translate(36, 80)">
+    <!-- User Badge -->
+    <g transform="translate(0, 0)">
+      <rect width="76" height="76" rx="10" fill="#ffffff" fill-opacity="0.06" stroke="url(#vistaRim)" stroke-width="1"/>
+      <text x="18" y="48" font-family="'Segoe UI', sans-serif" font-size="36">💻</text>
+    </g>
+
+    <!-- Details -->
+    <g transform="translate(96, 6)">
+      <text x="0" y="16" class="vista-title">GHisDW <tspan font-weight="normal" font-size="16" fill="#94a3b8">(peakcoder)</tspan></text>
+      <text x="0" y="36" class="vista-sub">Core Strengths: Node.js, Python, TypeScript &amp; Cross-Platform Desktop Development</text>
+
+      <!-- Specifications Table -->
+      <g transform="translate(0, 52)">
+        <!-- Field 1 -->
+        <g transform="translate(0, 0)">
+          <text x="0" y="12" class="vista-label">Operating Environment:</text>
+          <text x="165" y="12" class="vista-value">Electron · Node.js · Vite · Windows-First</text>
+        </g>
+        <!-- Field 2 -->
+        <g transform="translate(0, 26)">
+          <text x="0" y="12" class="vista-label">Verified Project:</text>
+          <text x="165" y="12" class="vista-value">Voxel⁺ (Isolated Java Minecraft Launcher)</text>
+        </g>
+        <!-- Field 3 -->
+        <g transform="translate(0, 50)">
+          <text x="0" y="12" class="vista-label">Communication:</text>
+          <text x="165" y="12" class="vista-value">Discord: DisGamerWorld · GitHub: GHisDW</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

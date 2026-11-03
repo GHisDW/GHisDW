@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="100%" height="auto">
+  <defs>
+    <linearGradient id="vHeroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#021217"/>
+      <stop offset="50%" stop-color="#042933"/>
+      <stop offset="100%" stop-color="#011117"/>
+    </linearGradient>
+    <linearGradient id="vAuroraHero" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.45"/>
+      <stop offset="40%" stop-color="#06b6d4" stop-opacity="0.4"/>
+      <stop offset="70%" stop-color="#0284c7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="vGlassHero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="vRimHero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="40%" stop-color="#67e8f9" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#34d399" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .v-name { font-family: 'Segoe UI', Tahoma, sans-serif; font-weight: bold; font-size: 38px; fill: #ffffff; letter-spacing: -0.5px; }
+    .v-desc { font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 15px; fill: #ccfbf1; line-height: 1.5; }
+    .v-subdesc { font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 14px; fill: #99f6e4; }
+    .v-pill { font-family: 'Segoe UI', Tahoma, sans-serif; font-weight: 600; font-size: 12px; fill: #f0fdfa; }
+    .v-wave { animation: vFloat 14s ease-in-out infinite alternate; }
+    @keyframes vFloat {
+      0% { transform: translateY(0px) scale(1); }
+      100% { transform: translateY(-16px) scale(1.04); }
+    }
+  </style>
+
+  <rect width="960" height="260" rx="16" fill="url(#vHeroBg)"/>
+
+  <!-- Vista Signature Flowing Ribbons -->
+  <g class="v-wave">
+    <path d="M-40,160 C180,70 340,240 560,130 C780,20 880,180 1020,90 L1020,300 L-40,300 Z" fill="url(#vAuroraHero)"/>
+    <path d="M-60,90 C160,200 380,50 600,170 C800,280 890,80 1040,180 L1040,300 L-60,300 Z" fill="url(#vAuroraHero)" opacity="0.5"/>
+  </g>
+
+  <!-- Vista Glass Panel with Specular Glow -->
+  <rect x="24" y="20" width="912" height="220" rx="14" fill="url(#vGlassHero)"/>
+  <rect x="24" y="20" width="912" height="220" rx="14" fill="none" stroke="url(#vRimHero)" stroke-width="1.4"/>
+
+  <!-- Top Curved Specular Arc -->
+  <path d="M24,45 Q480,95 936,45 L936,20 Q480,55 24,20 Z" fill="#ffffff" fill-opacity="0.1"/>
+
+  <!-- Header Details -->
+  <g transform="translate(54, 52)">
+    <rect width="170" height="26" rx="13" fill="#ffffff" fill-opacity="0.12" stroke="#67e8f9" stroke-width="0.8" stroke-opacity="0.6"/>
+    <circle cx="14" cy="13" r="3.5" fill="#34d399"/>
+    <text x="26" y="17" font-family="'Segoe UI', sans-serif" font-size="11.5" font-weight="bold" fill="#e0f2fe" letter-spacing="0.5">WINDOWS VISTA THEME</text>
+  </g>
+
+  <g transform="translate(54, 115)">
+    <text x="0" y="0" class="v-name">GHisDW <tspan font-weight="300" font-size="28" fill="#99f6e4">/ peakcoder</tspan></text>
+    <text x="0" y="32" class="v-desc">Software developer specializing in Node.js, Python, and standalone Electron applications.</text>
+    <text x="0" y="56" class="v-subdesc">Creator of Voxel⁺ · Windows-first design · Isolated Gradle &amp; Loom runtimes</text>
+  </g>
+
+  <!-- Right Side Badges -->
+  <g transform="translate(690, 50)">
+    <g transform="translate(0, 0)">
+      <rect width="215" height="36" rx="18" fill="#ffffff" fill-opacity="0.09" stroke="url(#vRimHero)" stroke-width="0.8"/>
+      <circle cx="18" cy="18" r="4.5" fill="#34d399"/>
+      <text x="32" y="22" class="v-pill">Node.js &amp; Python Core</text>
+    </g>
+    <g transform="translate(10, 48)">
+      <rect width="205" height="36" rx="18" fill="#ffffff" fill-opacity="0.09" stroke="url(#vRimHero)" stroke-width="0.8"/>
+      <circle cx="18" cy="18" r="4.5" fill="#38bdf8"/>
+      <text x="32" y="22" class="v-pill">Electron Applications</text>
+    </g>
+    <g transform="translate(20, 96)">
+      <rect width="195" height="36" rx="18" fill="#ffffff" fill-opacity="0.09" stroke="url(#vRimHero)" stroke-width="0.8"/>
+      <circle cx="18" cy="18" r="4.5" fill="#a7f3d0"/>
+      <text x="32" y="22" class="v-pill">Voxel⁺ Minecraft Build</text>
+    </g>
+  </g>
+</svg>

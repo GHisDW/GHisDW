@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 380" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040814" />
+      <stop offset="50%" stop-color="#080f20" />
+      <stop offset="100%" stop-color="#0b1329" />
+    </linearGradient>
+
+    <!-- Border Neon Gradient -->
+    <linearGradient id="neonBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+
+    <!-- Card Fill Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e172a" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0b1120" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="purpleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.2" opacity="0.35" />
+    </pattern>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.75" opacity="0.45" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 0.35; }
+    }
+    @keyframes radarSweep {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .grid-bg { opacity: 0.65; }
+    .status-pulse { animation: pulseGlow 2.5s ease-in-out infinite; }
+    .terminal-font { font-family: ui-monospace, SFMono-Regular, "Cascadia Code", "Fira Code", monospace; }
+    .display-font { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif; }
+  </style>
+
+  <!-- Outer Shell with chamfered cyberpunk corners -->
+  <rect x="2" y="2" width="916" height="376" rx="14" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="1.5" />
+  <rect x="2" y="2" width="916" height="376" rx="14" fill="url(#cyberGrid)" class="grid-bg" />
+
+  <!-- Subtle Scanline Overlay -->
+  <rect x="2" y="2" width="916" height="376" rx="14" fill="url(#scanlines)" />
+
+  <!-- Top Circuit Accent Line -->
+  <path d="M 30 2 L 180 2 L 200 16 L 360 16 L 375 2 L 890 2" stroke="url(#neonBorder)" stroke-width="2" fill="none" />
+  <circle cx="180" cy="2" r="2.5" fill="#00f2fe" />
+  <circle cx="375" cy="2" r="2.5" fill="#a855f7" />
+
+  <!-- Corner Brackets -->
+  <path d="M 16 35 L 16 16 L 35 16" stroke="#00f2fe" stroke-width="2" fill="none" opacity="0.8" />
+  <path d="M 904 35 L 904 16 L 885 16" stroke="#a855f7" stroke-width="2" fill="none" opacity="0.8" />
+  <path d="M 16 345 L 16 364 L 35 364" stroke="#00f2fe" stroke-width="2" fill="none" opacity="0.8" />
+  <path d="M 904 345 L 904 364 L 885 364" stroke="#a855f7" stroke-width="2" fill="none" opacity="0.8" />
+
+  <!-- Top Status Bar -->
+  <g transform="translate(40, 42)">
+    <!-- Terminal Header Badge -->
+    <rect x="0" y="0" width="132" height="24" rx="4" fill="#030712" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="12" cy="12" r="4" fill="#22c55e" class="status-pulse" />
+    <text x="24" y="16" class="terminal-font" font-size="11" font-weight="600" fill="#38bdf8" letter-spacing="1.2">SYSTEM ACTIVE</text>
+
+    <!-- Release Info -->
+    <text x="145" y="16" class="terminal-font" font-size="12" fill="#64748b">MODULE://</text>
+    <text x="215" y="16" class="terminal-font" font-size="12" font-weight="bold" fill="#f8fafc">CORE_LAUNCHER</text>
+    <text x="345" y="16" class="terminal-font" font-size="12" fill="#00f2fe">[v1.2.0 ARCHITECTURE]</text>
+
+    <!-- Platform Target Indicators -->
+    <rect x="740" y="0" width="100" height="24" rx="4" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <text x="790" y="16" text-anchor="middle" class="terminal-font" font-size="11" font-weight="600" fill="#94a3b8">ELECTRON · TS</text>
+  </g>
+
+  <!-- Left Column: Title & Architecture Highlights -->
+  <g transform="translate(40, 95)">
+    <!-- Title Section -->
+    <text x="0" y="44" class="display-font" font-size="44" font-weight="900" fill="#ffffff" letter-spacing="-0.5">Voxel<tspan fill="#38bdf8">⁺</tspan></text>
+    <text x="145" y="42" class="terminal-font" font-size="14" font-weight="600" fill="#a855f7">:: MINECRAFT RUNTIME SYSTEM</text>
+
+    <!-- Subtitle / Mission -->
+    <text x="2" y="76" class="display-font" font-size="15" fill="#94a3b8" font-weight="400">
+      Windows-first desktop launcher engineered for isolated, moddable Minecraft singleplayer.
+    </text>
+
+    <!-- Highlights Grid (2x2 tech spec cards) -->
+    <g transform="translate(0, 105)">
+      <!-- Card 1: Instance Isolation -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="265" height="68" rx="6" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1" />
+        <rect x="0" y="0" width="3" height="68" rx="1.5" fill="#00f2fe" />
+        <text x="16" y="26" class="terminal-font" font-size="12" font-weight="700" fill="#38bdf8">&gt; ISOLATED INSTANCES</text>
+        <text x="16" y="48" class="display-font" font-size="12" fill="#cbd5e1">Dedicated folders, configs &amp; saves.</text>
+      </g>
+
+      <!-- Card 2: Multi-Loader -->
+      <g transform="translate(280, 0)">
+        <rect x="0" y="0" width="265" height="68" rx="6" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1" />
+        <rect x="0" y="0" width="3" height="68" rx="1.5" fill="#38bdf8" />
+        <text x="16" y="26" class="terminal-font" font-size="12" font-weight="700" fill="#38bdf8">&gt; MULTI-LOADER COMPAT</text>
+        <text x="16" y="48" class="display-font" font-size="12" fill="#cbd5e1">Fabric, Quilt, Forge &amp; NeoForge.</text>
+      </g>
+
+      <!-- Card 3: Java Resolution -->
+      <g transform="translate(0, 80)">
+        <rect x="0" y="0" width="265" height="68" rx="6" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1" />
+        <rect x="0" y="0" width="3" height="68" rx="1.5" fill="#818cf8" />
+        <text x="16" y="26" class="terminal-font" font-size="12" font-weight="700" fill="#818cf8">&gt; JAVA RUNTIME MATRIX</text>
+        <text x="16" y="48" class="display-font" font-size="12" fill="#cbd5e1">Auto-detection for Java 8 through 25.</text>
+      </g>
+
+      <!-- Card 4: Mod Management -->
+      <g transform="translate(280, 80)">
+        <rect x="0" y="0" width="265" height="68" rx="6" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1" />
+        <rect x="0" y="0" width="3" height="68" rx="1.5" fill="#a855f7" />
+        <text x="16" y="26" class="terminal-font" font-size="12" font-weight="700" fill="#c084fc">&gt; MODS &amp; VPACKS</text>
+        <text x="16" y="48" class="display-font" font-size="12" fill="#cbd5e1">Built-in Modrinth + .mrpack conversion.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Column: Interactive Diagnostic HUD Console -->
+  <g transform="translate(620, 100)">
+    <!-- Terminal Shell Window -->
+    <rect x="0" y="0" width="260" height="248" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1.2" />
+    <rect x="0" y="0" width="260" height="28" rx="8" fill="#0f172a" />
+    <path d="M 0 28 L 260 28" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Terminal Window Controls -->
+    <circle cx="15" cy="14" r="4" fill="#ef4444" opacity="0.8" />
+    <circle cx="28" cy="14" r="4" fill="#f59e0b" opacity="0.8" />
+    <circle cx="41" cy="14" r="4" fill="#10b981" opacity="0.8" />
+    <text x="130" y="18" text-anchor="middle" class="terminal-font" font-size="10" fill="#64748b">console.stream</text>
+
+    <!-- Console Log Stream Contents -->
+    <g transform="translate(14, 46)" class="terminal-font" font-size="11">
+      <text x="0" y="10" fill="#64748b">[00:00:01] <tspan fill="#38bdf8">INIT</tspan> electron.main</text>
+      <text x="0" y="28" fill="#64748b">[00:00:01] <tspan fill="#00f2fe">DISC</tspan> java-runtimes: 4</text>
+      <text x="0" y="46" fill="#64748b">[00:00:02] <tspan fill="#a855f7">LOAD</tspan> instances: verified</text>
+      <text x="0" y="64" fill="#64748b">[00:00:02] <tspan fill="#22c55e">PASS</tspan> preflight checks</text>
+
+      <!-- Horizontal Divider in Console -->
+      <line x1="0" y1="80" x2="232" y2="80" stroke="#1e293b" stroke-width="1" stroke-dasharray="3 3" />
+
+      <!-- Metric Bars -->
+      <text x="0" y="102" fill="#94a3b8" font-size="10">OFFLINE READY</text>
+      <rect x="0" y="108" width="232" height="6" rx="3" fill="#1e293b" />
+      <rect x="0" y="108" width="232" height="6" rx="3" fill="#38bdf8" />
+
+      <text x="0" y="132" fill="#94a3b8" font-size="10">ISOLATION INTEGRITY</text>
+      <rect x="0" y="138" width="232" height="6" rx="3" fill="#1e293b" />
+      <rect x="0" y="138" width="205" height="6" rx="3" fill="#a855f7" />
+
+      <text x="0" y="162" fill="#94a3b8" font-size="10">ONLINE DISCOVERY</text>
+      <rect x="0" y="168" width="232" height="6" rx="3" fill="#1e293b" />
+      <rect x="0" y="168" width="232" height="6" rx="3" fill="#00f2fe" />
+
+      <!-- Prompt Line -->
+      <text x="0" y="194" fill="#38bdf8">&gt; status: <tspan fill="#22c55e">READY_TO_LAUNCH</tspan><tspan fill="#00f2fe" class="status-pulse">_</tspan></text>
+    </g>
+  </g>
+</svg>

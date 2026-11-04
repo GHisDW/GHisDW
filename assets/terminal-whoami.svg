@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 290" width="100%" height="290">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811" />
+      <stop offset="50%" stop-color="#0a1020" />
+      <stop offset="100%" stop-color="#070c18" />
+    </linearGradient>
+
+    <!-- Cyberpunk Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100%" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#00f0ff" stroke-opacity="0.03" stroke-width="1" />
+    </pattern>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="cyberGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.04" />
+    </pattern>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonCyan" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00f0ff" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace; }
+    .cursor-blink { animation: blink 1s step-end infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    .tag-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; }
+  </style>
+
+  <!-- Card Frame -->
+  <rect x="5" y="5" width="840" height="280" rx="10" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.5" />
+
+  <!-- Background Grid & Scanlines -->
+  <rect x="5" y="5" width="840" height="280" rx="10" fill="url(#cyberGrid)" />
+  <rect x="5" y="5" width="840" height="280" rx="10" fill="url(#scanlines)" />
+
+  <!-- Terminal Top Bar -->
+  <path d="M 5 15 Q 5 5 15 5 L 835 5 Q 845 5 845 15 L 845 36 L 5 36 Z" fill="#0c1427" fill-opacity="0.85" />
+  <line x1="5" y1="36" x2="845" y2="36" stroke="#00f0ff" stroke-opacity="0.25" stroke-width="1" />
+
+  <!-- Window Dots -->
+  <circle cx="25" cy="20" r="5" fill="#ef4444" opacity="0.8" />
+  <circle cx="42" cy="20" r="5" fill="#f59e0b" opacity="0.8" />
+  <circle cx="59" cy="20" r="5" fill="#10b981" opacity="0.8" />
+
+  <!-- Terminal Header Title -->
+  <text x="82" y="24" fill="#94a3b8" class="mono" font-size="12" font-weight="500">SYSTEM_MODULE // IDENTITY_MATRIX</text>
+  <text x="815" y="24" fill="#00f0ff" class="mono" font-size="11" font-weight="600" text-anchor="end">SYS: ONLINE [TLS_1.3]</text>
+
+  <!-- Cyber HUD Corners -->
+  <path d="M 12 45 L 12 55" stroke="#00f0ff" stroke-width="2" />
+  <path d="M 12 45 L 22 45" stroke="#00f0ff" stroke-width="2" />
+  <path d="M 838 45 L 838 55" stroke="#00f0ff" stroke-width="2" />
+  <path d="M 838 45 L 828 45" stroke="#00f0ff" stroke-width="2" />
+  <path d="M 12 275 L 12 265" stroke="#00f0ff" stroke-width="2" />
+  <path d="M 12 275 L 22 275" stroke="#00f0ff" stroke-width="2" />
+  <path d="M 838 275 L 838 265" stroke="#00f0ff" stroke-width="2" />
+  <path d="M 838 275 L 828 275" stroke="#00f0ff" stroke-width="2" />
+
+  <!-- Terminal Content Lines -->
+  <!-- Prompt 1 -->
+  <text x="30" y="66" fill="#38bdf8" class="mono" font-size="13" font-weight="600">peakcoder@desktop</text>
+  <text x="165" y="66" fill="#94a3b8" class="mono" font-size="13">:</text>
+  <text x="175" y="66" fill="#a855f7" class="mono" font-size="13">~/identity</text>
+  <text x="255" y="66" fill="#00f0ff" class="mono" font-size="13">$ whoami</text>
+  <text x="30" y="88" fill="#e2e8f0" class="mono" font-size="14" font-weight="700">GHisDW <tspan fill="#64748b" font-weight="400">|</tspan> <tspan fill="#00f0ff">peakcoder</tspan></text>
+
+  <!-- Prompt 2 -->
+  <text x="30" y="118" fill="#38bdf8" class="mono" font-size="13" font-weight="600">peakcoder@desktop</text>
+  <text x="165" y="118" fill="#94a3b8" class="mono" font-size="13">:</text>
+  <text x="175" y="118" fill="#a855f7" class="mono" font-size="13">~/identity</text>
+  <text x="255" y="118" fill="#00f0ff" class="mono" font-size="13">$ cat ./profile.json</text>
+
+  <!-- JSON Output Box -->
+  <rect x="30" y="132" width="790" height="135" rx="6" fill="#060c18" stroke="#1e293b" stroke-width="1" />
+
+  <text x="45" y="154" fill="#94a3b8" class="mono" font-size="12.5">{</text>
+
+  <text x="65" y="174" fill="#00f0ff" class="mono" font-size="12.5">"role"</text>
+  <text x="120" y="174" fill="#94a3b8" class="mono" font-size="12.5">:</text>
+  <text x="135" y="174" fill="#f8fafc" class="mono" font-size="12.5">"Desktop Application &amp; Automation Developer",</text>
+
+  <text x="65" y="196" fill="#00f0ff" class="mono" font-size="12.5">"core_strengths"</text>
+  <text x="185" y="196" fill="#94a3b8" class="mono" font-size="12.5">:</text>
+  <text x="200" y="196" fill="#38bdf8" class="mono" font-size="12.5">["Node.js"</text><text x="280" y="196" fill="#94a3b8" class="mono" font-size="12.5">, </text><text x="295" y="196" fill="#38bdf8" class="mono" font-size="12.5">"Python"]</text><text x="365" y="196" fill="#94a3b8" class="mono" font-size="12.5">, </text>
+  <text x="385" y="196" fill="#64748b" class="mono" font-size="12">// Primary technical focus</text>
+
+  <text x="65" y="218" fill="#00f0ff" class="mono" font-size="12.5">"flagship"</text>
+  <text x="145" y="218" fill="#94a3b8" class="mono" font-size="12.5">:</text>
+  <text x="160" y="218" fill="#a855f7" class="mono" font-size="12.5">"Voxel⁺"</text><text x="220" y="218" fill="#94a3b8" class="mono" font-size="12.5">, </text>
+  <text x="235" y="218" fill="#64748b" class="mono" font-size="12">// Electron + TypeScript isolated launcher</text>
+
+  <text x="65" y="240" fill="#00f0ff" class="mono" font-size="12.5">"interests"</text>
+  <text x="155" y="240" fill="#94a3b8" class="mono" font-size="12.5">:</text>
+  <text x="170" y="240" fill="#34d399" class="mono" font-size="12.5">["Discord APIs (Advanced)", "Cross-Platform Electron", "Modding Ecosystems"]</text>
+
+  <text x="45" y="258" fill="#94a3b8" class="mono" font-size="12.5">}</text>
+
+  <!-- Blinking Terminal Cursor -->
+  <rect x="60" y="248" width="8" height="13" fill="#00f0ff" class="cursor-blink" />
+</svg>

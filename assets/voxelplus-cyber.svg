@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 320" width="100%" height="320">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="vBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040711" />
+      <stop offset="60%" stop-color="#080e1e" />
+      <stop offset="100%" stop-color="#050a14" />
+    </linearGradient>
+
+    <!-- Cyber Neon Border Gradient -->
+    <linearGradient id="vBorderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#00f0ff" />
+    </linearGradient>
+
+    <!-- Header Banner Gradient -->
+    <linearGradient id="vHeaderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0b1329" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#141c38" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="vScanlines" width="100%" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#00f0ff" stroke-opacity="0.02" stroke-width="1" />
+    </pattern>
+
+    <!-- Cyber Matrix Grid -->
+    <pattern id="vGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.05" />
+    </pattern>
+
+    <filter id="vGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#00f0ff" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .pulse-glow { animation: pulseAnim 3s infinite alternate; }
+    @keyframes pulseAnim {
+      0% { filter: drop-shadow(0 0 2px #00f0ff); }
+      100% { filter: drop-shadow(0 0 8px #a855f7); }
+    }
+  </style>
+
+  <!-- Main Card Container -->
+  <rect x="5" y="5" width="840" height="310" rx="10" fill="url(#vBgGrad)" stroke="url(#vBorderGrad)" stroke-width="1.5" />
+  <rect x="5" y="5" width="840" height="310" rx="10" fill="url(#vGrid)" />
+  <rect x="5" y="5" width="840" height="310" rx="10" fill="url(#vScanlines)" />
+
+  <!-- Top Decorative Header Bar -->
+  <path d="M 5 15 Q 5 5 15 5 L 835 5 Q 845 5 845 15 L 845 40 L 5 40 Z" fill="url(#vHeaderGrad)" />
+  <line x1="5" y1="40" x2="845" y2="40" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1" />
+
+  <!-- Window Indicator / Status -->
+  <rect x="25" y="15" width="10" height="10" fill="#00f0ff" opacity="0.8" />
+  <rect x="40" y="15" width="10" height="10" fill="#8b5cf6" opacity="0.8" />
+  <text x="60" y="24" fill="#94a3b8" class="mono" font-size="12" font-weight="600">FLAGSHIP_SYSTEM // PROJECT_OVERVIEW</text>
+
+  <text x="825" y="24" fill="#00f0ff" class="mono" font-size="11" font-weight="600" text-anchor="end">STATUS: ACTIVE &amp; STABLE</text>
+
+  <!-- Left Block: Project Brand & Stack -->
+  <g transform="translate(30, 60)">
+    <!-- Voxel+ Glowing Title -->
+    <text x="0" y="32" fill="#ffffff" class="sans" font-size="34" font-weight="800" letter-spacing="-0.5">Voxel<tspan fill="#00f0ff" font-weight="900">⁺</tspan></text>
+    <text x="125" y="28" fill="#38bdf8" class="mono" font-size="12" font-weight="600">// MINECRAFT LAUNCHER</text>
+    <text x="0" y="54" fill="#94a3b8" class="sans" font-size="13.5">Next-generation Windows desktop launcher for isolated, moddable Minecraft singleplayer.</text>
+
+    <!-- Architecture & Loader Badges -->
+    <g transform="translate(0, 72)">
+      <!-- Badge: Electron -->
+      <rect x="0" y="0" width="88" height="24" rx="4" fill="#091426" stroke="#38bdf8" stroke-width="1" />
+      <text x="44" y="16" fill="#38bdf8" class="mono" font-size="11" font-weight="600" text-anchor="middle">Electron</text>
+
+      <!-- Badge: TypeScript -->
+      <rect x="96" y="0" width="100" height="24" rx="4" fill="#091426" stroke="#3178c6" stroke-width="1" />
+      <text x="146" y="16" fill="#60a5fa" class="mono" font-size="11" font-weight="600" text-anchor="middle">TypeScript</text>
+
+      <!-- Badge: Vite -->
+      <rect x="204" y="0" width="60" height="24" rx="4" fill="#091426" stroke="#a855f7" stroke-width="1" />
+      <text x="234" y="16" fill="#c084fc" class="mono" font-size="11" font-weight="600" text-anchor="middle">Vite</text>
+
+      <!-- Badge: Loom & Gradle -->
+      <rect x="272" y="0" width="112" height="24" rx="4" fill="#091426" stroke="#00f0ff" stroke-width="1" />
+      <text x="328" y="16" fill="#00f0ff" class="mono" font-size="11" font-weight="600" text-anchor="middle">Loom / Gradle</text>
+    </g>
+
+    <!-- Core Architecture Capabilities Box -->
+    <g transform="translate(0, 112)">
+      <rect x="0" y="0" width="480" height="118" rx="6" fill="#060c18" stroke="#1e293b" stroke-width="1" />
+
+      <!-- Feature item 1 -->
+      <circle cx="16" cy="22" r="3" fill="#00f0ff" />
+      <text x="28" y="26" fill="#f1f5f9" class="mono" font-size="12" font-weight="600">Isolated Instances:</text>
+      <text x="180" y="26" fill="#94a3b8" class="sans" font-size="12">Dedicated configs, mods, saves, and runtimes</text>
+
+      <!-- Feature item 2 -->
+      <circle cx="16" cy="48" r="3" fill="#a855f7" />
+      <text x="28" y="52" fill="#f1f5f9" class="mono" font-size="12" font-weight="600">Multi-Loader Engine:</text>
+      <text x="180" y="52" fill="#94a3b8" class="sans" font-size="12">Fabric, Quilt, Forge &amp; NeoForge ready</text>
+
+      <!-- Feature item 3 -->
+      <circle cx="16" cy="74" r="3" fill="#38bdf8" />
+      <text x="28" y="78" fill="#f1f5f9" class="mono" font-size="12" font-weight="600">Offline-First Execution:</text>
+      <text x="188" y="78" fill="#94a3b8" class="sans" font-size="12">Full singleplayer launching without network</text>
+
+      <!-- Feature item 4 -->
+      <circle cx="16" cy="100" r="3" fill="#10b981" />
+      <text x="28" y="104" fill="#f1f5f9" class="mono" font-size="12" font-weight="600">Runtime Detection:</text>
+      <text x="180" y="104" fill="#94a3b8" class="sans" font-size="12">Auto Java 8 through 25 version matching</text>
+    </g>
+  </g>
+
+  <!-- Right Block: Cyber HUD Diagram / Telemetry -->
+  <g transform="translate(540, 60)">
+    <!-- HUD Outer Box -->
+    <rect x="0" y="0" width="280" height="230" rx="8" fill="#060b16" stroke="#1f2d4d" stroke-width="1" />
+    <path d="M 0 0 L 20 0 L 0 20 Z" fill="#00f0ff" opacity="0.8" />
+    <path d="M 280 230 L 260 230 L 280 210 Z" fill="#8b5cf6" opacity="0.8" />
+
+    <!-- HUD Sub-Header -->
+    <text x="15" y="24" fill="#64748b" class="mono" font-size="10" font-weight="600">DIAGNOSTICS &amp; DISCOVERY</text>
+    <line x1="15" y1="32" x2="265" y2="32" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Modrinth Discovery Panel -->
+    <g transform="translate(15, 45)">
+      <rect x="0" y="0" width="250" height="38" rx="4" fill="#0a1224" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1" />
+      <text x="12" y="18" fill="#00f0ff" class="mono" font-size="11" font-weight="600">MODRINTH BROWSER</text>
+      <text x="12" y="30" fill="#94a3b8" class="sans" font-size="10">Integrated mod discovery &amp; one-click install</text>
+    </g>
+
+    <!-- Real-time Console Log Stream Panel -->
+    <g transform="translate(15, 93)">
+      <rect x="0" y="0" width="250" height="38" rx="4" fill="#0a1224" stroke="#8b5cf6" stroke-opacity="0.3" stroke-width="1" />
+      <text x="12" y="18" fill="#c084fc" class="mono" font-size="11" font-weight="600">LIVE PROCESS LOGS</text>
+      <text x="12" y="30" fill="#94a3b8" class="sans" font-size="10">Streamed Minecraft &amp; Gradle telemetry</text>
+    </g>
+
+    <!-- Skin Manager / VPacks Panel -->
+    <g transform="translate(15, 141)">
+      <rect x="0" y="0" width="250" height="38" rx="4" fill="#0a1224" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1" />
+      <text x="12" y="18" fill="#38bdf8" class="mono" font-size="11" font-weight="600">SKIN MANAGER &amp; VPACKS</text>
+      <text x="12" y="30" fill="#94a3b8" class="sans" font-size="10">Custom skins, preview library, .mrpack import</text>
+    </g>
+
+    <!-- Repository Action Anchor Info -->
+    <g transform="translate(15, 192)">
+      <text x="125" y="16" fill="#00f0ff" class="mono" font-size="11" font-weight="600" text-anchor="middle">→ GHisDW/voxelplus</text>
+    </g>
+  </g>
+</svg>

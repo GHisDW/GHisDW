@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 290" width="100%" height="auto">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="cyberCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="50%" stop-color="#0a1024"/>
+      <stop offset="100%" stop-color="#070c1b"/>
+    </linearGradient>
+
+    <!-- Neon Cyan Border Gradient -->
+    <linearGradient id="neonCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Header Terminal Gradient -->
+    <linearGradient id="termHeaderBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1e1b4b" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Card Pill Surface -->
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5ff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.04"/>
+    </linearGradient>
+
+    <!-- Laser Line Gradient -->
+    <linearGradient id="laserGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="70%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#00f5ff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.2" opacity="0.35"/>
+    </pattern>
+
+    <!-- Dot Matrix Pattern -->
+    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#00f5ff" opacity="0.12"/>
+    </pattern>
+
+    <!-- Neon Glow Filter -->
+    <filter id="neonBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .mono {
+      font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .sans {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    .hud-title {
+      font-weight: 800;
+      font-size: 28px;
+      fill: #ffffff;
+      letter-spacing: 0.5px;
+    }
+    .hud-badge {
+      font-size: 11px;
+      font-weight: 700;
+      fill: #00f5ff;
+      letter-spacing: 1px;
+    }
+    .hud-tag {
+      font-size: 12px;
+      fill: #94a3b8;
+    }
+    .metric-val {
+      font-size: 13px;
+      font-weight: 600;
+      fill: #e2e8f0;
+    }
+    .metric-lbl {
+      font-size: 10px;
+      font-weight: 700;
+      fill: #00f5ff;
+      letter-spacing: 0.5px;
+    }
+    .pulse-dot {
+      animation: pulseAnim 2s infinite ease-in-out;
+    }
+    .radar-sweep {
+      animation: sweepAnim 6s linear infinite;
+      transform-origin: 880px 52px;
+    }
+    @keyframes pulseAnim {
+      0%, 100% { opacity: 0.3; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
+    @keyframes sweepAnim {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
+  <!-- Outer Frame Background -->
+  <rect x="10" y="10" width="940" height="270" rx="10" fill="url(#cyberCardBg)" stroke="#1e293b" stroke-width="1.5"/>
+  <rect x="10" y="10" width="940" height="270" rx="10" fill="url(#dotGrid)"/>
+  <rect x="10" y="10" width="940" height="270" rx="10" fill="url(#scanlines)"/>
+
+  <!-- High-Tech Cyber Corner Brackets -->
+  <path d="M10 35 L10 10 L35 10" fill="none" stroke="#00f5ff" stroke-width="2.5"/>
+  <path d="M950 35 L950 10 L925 10" fill="none" stroke="#00f5ff" stroke-width="2.5"/>
+  <path d="M10 255 L10 280 L35 280" fill="none" stroke="#a855f7" stroke-width="2.5"/>
+  <path d="M950 255 L950 280 L925 280" fill="none" stroke="#a855f7" stroke-width="2.5"/>
+
+  <!-- Top Accent Laser -->
+  <line x1="35" y1="10" x2="400" y2="10" stroke="url(#laserGrad)" stroke-width="2"/>
+
+  <!-- HUD Terminal Header Bar -->
+  <rect x="25" y="24" width="910" height="56" rx="6" fill="url(#termHeaderBg)" stroke="#334155" stroke-width="1"/>
+
+  <!-- Status Indicator Dot -->
+  <circle cx="48" cy="52" r="5" fill="#00f5ff" class="pulse-dot" filter="url(#neonBlur)"/>
+  <circle cx="48" cy="52" r="2.5" fill="#ffffff"/>
+
+  <!-- Project Title and Tagline -->
+  <text x="68" y="58" class="sans hud-title">Voxel⁺</text>
+  <rect x="175" y="42" width="105" height="20" rx="4" fill="#00f5ff" fill-opacity="0.12" stroke="#00f5ff" stroke-width="0.8"/>
+  <text x="183" y="56" class="mono hud-badge">FLAGSHIP SYS</text>
+  <text x="295" y="56" class="sans hud-tag">Isolated Multi-Loader Minecraft Launcher &amp; Runtime Resolver</text>
+
+  <!-- Mini Radar / System Status on Header Right -->
+  <g transform="translate(0, 0)">
+    <circle cx="880" cy="52" r="16" fill="none" stroke="#334155" stroke-width="1"/>
+    <circle cx="880" cy="52" r="8" fill="none" stroke="#00f5ff" stroke-width="0.7" opacity="0.5"/>
+    <line x1="864" y1="52" x2="896" y2="52" stroke="#334155" stroke-width="0.8"/>
+    <line x1="880" y1="36" x2="880" y2="68" stroke="#334155" stroke-width="0.8"/>
+    <line x1="880" y1="52" x2="894" y2="44" stroke="#00f5ff" stroke-width="1.5" class="radar-sweep"/>
+    <text x="750" y="55" class="mono" font-size="11" fill="#38bdf8" text-anchor="end">SYS_ONLINE // v1.2.0</text>
+  </g>
+
+  <!-- Middle Specification Grid (3 Cards) -->
+  <g transform="translate(25, 96)">
+    <!-- Spec Card 1: Core Architecture -->
+    <g transform="translate(0, 0)">
+      <rect width="292" height="78" rx="6" fill="url(#pillGrad)" stroke="#1e293b" stroke-width="1"/>
+      <path d="M0 12 L0 0 L12 0" fill="none" stroke="#00f5ff" stroke-width="1.5"/>
+      <text x="14" y="24" class="mono metric-lbl">01 // CORE ARCHITECTURE</text>
+      <text x="14" y="46" class="mono metric-val">Electron 39 · Vite 6 · TS 5.7</text>
+      <text x="14" y="65" class="sans hud-tag" font-size="11">Dedicated Gradle &amp; Loom process isolation</text>
+    </g>
+
+    <!-- Spec Card 2: Multi-Loader & Instances -->
+    <g transform="translate(308, 0)">
+      <rect width="294" height="78" rx="6" fill="url(#pillGrad)" stroke="#1e293b" stroke-width="1"/>
+      <path d="M0 12 L0 0 L12 0" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="14" y="24" class="mono metric-lbl">02 // MULTI-LOADER &amp; PACKS</text>
+      <text x="14" y="46" class="mono metric-val">Fabric · Quilt · Forge · NeoForge</text>
+      <text x="14" y="65" class="sans hud-tag" font-size="11">.mrpack &amp; .vpack format importing</text>
+    </g>
+
+    <!-- Spec Card 3: Runtime & Discovery -->
+    <g transform="translate(618, 0)">
+      <rect width="292" height="78" rx="6" fill="url(#pillGrad)" stroke="#1e293b" stroke-width="1"/>
+      <path d="M0 12 L0 0 L12 0" fill="none" stroke="#a855f7" stroke-width="1.5"/>
+      <text x="14" y="24" class="mono metric-lbl">03 // RUNTIME &amp; DISCOVERY</text>
+      <text x="14" y="46" class="mono metric-val">Java 8–25 Auto · Modrinth API</text>
+      <text x="14" y="65" class="sans hud-tag" font-size="11">Streamed live JVM &amp; Gradle diagnostics</text>
+    </g>
+  </g>
+
+  <!-- Bottom Terminal Verification Chips -->
+  <g transform="translate(25, 192)">
+    <!-- Chip 1: Offline Execution -->
+    <g transform="translate(0, 0)">
+      <rect width="215" height="36" rx="4" fill="#00f5ff" fill-opacity="0.06" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#00f5ff"/>
+      <text x="30" y="22" class="mono" font-size="11" font-weight="600" fill="#e2e8f0">OFFLINE INSTANCE EXEC</text>
+    </g>
+
+    <!-- Chip 2: Isolated Loom -->
+    <g transform="translate(230, 0)">
+      <rect width="220" height="36" rx="4" fill="#38bdf8" fill-opacity="0.06" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#38bdf8"/>
+      <text x="30" y="22" class="mono" font-size="11" font-weight="600" fill="#e2e8f0">PER-INSTANCE ISOLATION</text>
+    </g>
+
+    <!-- Chip 3: Skin Manager -->
+    <g transform="translate(465, 0)">
+      <rect width="210" height="36" rx="4" fill="#a855f7" fill-opacity="0.06" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1"/>
+      <circle cx="16" cy="18" r="4" fill="#a855f7"/>
+      <text x="30" y="22" class="mono" font-size="11" font-weight="600" fill="#e2e8f0">3D SKINVIEW &amp; MODPACKS</text>
+    </g>
+
+    <!-- Chip 4: View Project Action Link -->
+    <g transform="translate(690, 0)">
+      <rect width="220" height="36" rx="4" fill="#00f5ff" fill-opacity="0.14" stroke="#00f5ff" stroke-width="1.2"/>
+      <text x="28" y="23" class="mono" font-size="12" font-weight="700" fill="#ffffff">INITIALIZE REPO ↗</text>
+      <path d="M178 14 L190 14 L190 26 M190 14 L176 28" fill="none" stroke="#00f5ff" stroke-width="1.8"/>
+    </g>
+  </g>
+
+  <!-- Bottom Decorative Terminal Line -->
+  <line x1="25" y1="246" x2="935" y2="246" stroke="#1e293b" stroke-width="1"/>
+  <text x="25" y="266" class="mono" font-size="11" fill="#64748b">> RUNNING ON FABRIC LOOM TOOLING // COMPATIBLE WITH MC 1.15.2 - 26.x // ZERO TELEMETRY</text>
+</svg>

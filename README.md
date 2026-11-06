@@ -1,68 +1,85 @@
 <p align="center">
-  <img src="assets/aero-hero.svg" width="100%" alt="GHisDW / peakcoder — Developer Profile" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:050814,50:091428,100:00f5ff&height=220&section=header&text=GHisDW&fontSize=64&fontColor=00f5ff&desc=peakcoder%20%2F%2F%20systems%20%C2%B7%20desktop%20%C2%B7%20automation&descAlignY=62&descSize=19&descAlign=50" width="100%" alt="GHisDW Header" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-active-38bdf8?style=flat-square&logo=statuspal&logoColor=white" alt="Status" />
-  <img src="https://img.shields.io/badge/discord-DisGamerWorld-818cf8?style=flat-square&logo=discord&logoColor=white" alt="Discord" />
-  <img src="https://komarev.com/ghpvc/?username=GHisDW&style=flat-square&color=38bdf8&label=profile%20views" alt="Views" />
-</p>
-
-<p align="center">
-  <img src="assets/wave-divider.svg" width="100%" alt="Wave Divider" />
-</p>
-
-## About Me
-
-I am a software developer focused on building robust desktop applications, automation tools, and developer workflows. I enjoy understanding how complex runtime systems work under the hood and crafting clean, reliable software that stays out of the user's way.
-
-- **Primary focus:** Desktop applications and system utilities using **Node.js**, **Python**, and **TypeScript**.
-- **Application development:** Engineering cross-platform desktop experiences with **Electron** and **Vite**.
-- **Automation & bots:** Building advanced bots and integrations using the **Discord API**.
-- **Ecosystem exploration:** Exploring Java environments and Minecraft modding tooling (Fabric, Loom, Gradle).
-
-<p align="center">
-  <img src="assets/wave-divider.svg" width="100%" alt="Wave Divider" />
-</p>
-
-## Featured Project
-
-<p align="center">
-  <a href="https://github.com/GHisDW/voxelplus">
-    <img src="assets/voxelplus-glass.svg" width="100%" alt="Voxel+ Minecraft Launcher Showcase" />
+  <a href="https://github.com/GHisDW">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=00F5FF&center=true&vCenter=true&width=700&lines=%24+node+--version+v22.x+%2F%2F+core+engine;%24+python+--version+3.12+%2F%2F+automation+%26+tools;%24+whoami+GHisDW+%2F%2F+desktop+%26+system+tooling;%24+.%2Fvoxelplus+--status%3Dready+%2F%2F+electron+%2B+typescript" alt="Terminal Typing Animation" />
   </a>
 </p>
 
-**[Voxel⁺](https://github.com/GHisDW/voxelplus)** is a desktop Minecraft launcher built with Electron and TypeScript, engineered specifically for isolated, moddable singleplayer instances.
+<p align="center">
+  <img src="https://img.shields.io/badge/status-active-00f5ff?style=flat-square&logo=statuspal&logoColor=050814" alt="Status" />
+  <img src="https://img.shields.io/badge/discord-DisGamerWorld-a855f7?style=flat-square&logo=discord&logoColor=white" alt="Discord" />
+  <img src="https://komarev.com/ghpvc/?username=GHisDW&style=flat-square&color=00f5ff&label=profile%20views" alt="Views" />
+</p>
 
-Rather than sharing files and configs across installations, every instance maintains its own dedicated folder, configuration, and Gradle/Loom environment.
+<p align="center">
+  <img src="assets/cyber-divider.svg" width="100%" alt="Cyber Divider" />
+</p>
 
-- **Independent Instance Isolation:** Each instance contains its own options, saves, configs, and mod directories without cross-contamination.
-- **Multi-Loader Compatibility:** Loader-specific generation and workflow support for Fabric, Quilt, Forge, and NeoForge.
-- **Offline-First Instance Launching:** Instances prepare and launch completely offline once the initial game files and runtime are obtained.
-- **Online Mod Discovery:** Built-in Modrinth browser for discovering and installing mods directly into specific instances.
-- **Runtime Resolution:** Centralized Java compatibility resolver with automated runtime detection matching versions from Java 8 through 25.
-- **Diagnostics:** Streamed live Minecraft and Gradle console logs with actionable error reporting.
+### ❯ whoami
+
+```ansi
+[1;36mdeveloper@gh-terminal[0m:[1;35m~[0m$ cat identity.json
+{
+  "handle": "GHisDW",
+  "alias": "peakcoder",
+  "core_focus": ["Node.js", "Python"],
+  "engineering": ["Electron Applications", "TypeScript", "Automation & Discord Bots"],
+  "exploring": ["Fabric Tooling", "Loom / Gradle Pipelines", "JVM Runtime Detection"],
+  "flagship": "https://github.com/GHisDW/voxelplus"
+}
+```
+
+I build focused desktop applications, automation tools, and developer utilities. My work centers on runtime process management, isolated application environments, and clean desktop architectures with **Node.js** and **Python**.
+
+- **Desktop Systems:** Architecting cross-platform applications with **Electron**, **TypeScript**, and **Vite**.
+- **Automation & Integrations:** Building robust bots, event pipelines, and utilities with the **Discord API**.
+- **Tooling & Runtimes:** Working with Minecraft Java runtimes, Fabric Loom environments, and headless Gradle automation.
+
+<p align="center">
+  <img src="assets/cyber-divider.svg" width="100%" alt="Cyber Divider" />
+</p>
+
+### ❯ featured_system: Voxel⁺
 
 <p align="center">
   <a href="https://github.com/GHisDW/voxelplus">
-    <img src="https://img.shields.io/badge/Repository-GHisDW%2Fvoxelplus-38bdf8?style=flat-square&logo=github&logoColor=white" alt="Voxel+ GitHub" />
+    <img src="assets/voxelplus-cyber.svg" width="100%" alt="Voxel+ Minecraft Launcher Showcase" />
+  </a>
+</p>
+
+**[Voxel⁺](https://github.com/GHisDW/voxelplus)** is an open-source desktop Minecraft launcher engineered in **Electron** and **TypeScript**, focused on isolated singleplayer instance management and multi-loader mod workflows.
+
+Rather than running shared global configurations, every instance manages its own isolated directory structure, Loom/Gradle environment, options, and mods.
+
+- **Isolated Instance Execution:** Dedicated root directories, configuration files, and mod environments prevent cross-version pollution.
+- **Multi-Loader Compatibility:** Loader-specific generation and project support for Fabric, Quilt, Forge, and NeoForge.
+- **Offline Launch Pipeline:** Instances run entirely offline once initial game libraries and runtimes are fetched.
+- **Integrated Mod Discovery:** Native Modrinth browser for discovering and installing compatible mods directly into specific instances.
+- **Automated Java Compatibility:** Centralized runtime resolver matching Java 8 through Java 25 across Minecraft eras (1.15.2 through 26.x).
+- **Diagnostics & Skin Tools:** Real-time JVM and Gradle console streaming alongside local 3D skin management via `skinview3d`.
+
+<p align="center">
+  <a href="https://github.com/GHisDW/voxelplus">
+    <img src="https://img.shields.io/badge/Repository-GHisDW%2Fvoxelplus-00f5ff?style=flat-square&logo=github&logoColor=050814" alt="Voxel+ GitHub" />
   </a>
   <a href="https://github.com/GHisDW/voxelplus/blob/main/DOWNLOADING.md">
-    <img src="https://img.shields.io/badge/Guide-DOWNLOADING.md-818cf8?style=flat-square&logo=readme&logoColor=white" alt="Voxel+ Guide" />
+    <img src="https://img.shields.io/badge/Guide-DOWNLOADING.md-38bdf8?style=flat-square&logo=readme&logoColor=white" alt="Voxel+ Guide" />
   </a>
   <a href="https://github.com/GHisDW/voxelplus/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-a78bfa?style=flat-square&logo=open-source-initiative&logoColor=white" alt="MIT License" />
+    <img src="https://img.shields.io/badge/License-MIT-a855f7?style=flat-square&logo=open-source-initiative&logoColor=white" alt="MIT License" />
   </a>
 </p>
 
 <p align="center">
-  <img src="assets/wave-divider.svg" width="100%" alt="Wave Divider" />
+  <img src="assets/cyber-divider.svg" width="100%" alt="Cyber Divider" />
 </p>
 
-## Tech Stack
+### ❯ tech_stack
 
-### Core Strengths
+#### Primary Strengths
 <p align="left">
   <a href="https://nodejs.org">
     <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
@@ -72,7 +89,7 @@ Rather than sharing files and configs across installations, every instance maint
   </a>
 </p>
 
-### Applications, Languages & Tools
+#### Applications, Languages & Tools
 <p align="left">
   <a href="https://www.typescriptlang.org">
     <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
@@ -98,14 +115,14 @@ Rather than sharing files and configs across installations, every instance maint
 </p>
 
 <p align="center">
-  <img src="assets/wave-divider.svg" width="100%" alt="Wave Divider" />
+  <img src="assets/cyber-divider.svg" width="100%" alt="Cyber Divider" />
 </p>
 
-## GitHub Activity
+### ❯ telemetry & metrics
 
 <p align="center">
-  <img src="https://github-readme-stats-fast.vercel.app/api?username=GHisDW&show_icons=true&theme=transparent&bg_color=00000000&title_color=38bdf8&text_color=94a3b8&icon_color=818cf8&border_color=334155&hide_border=false" alt="GHisDW GitHub Stats" height="170" />
-  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=GHisDW&layout=compact&theme=transparent&bg_color=00000000&title_color=38bdf8&text_color=94a3b8&border_color=334155&hide_border=false" alt="Top Languages" height="170" />
+  <img src="https://github-readme-stats-fast.vercel.app/api?username=GHisDW&show_icons=true&theme=transparent&bg_color=00000000&title_color=00f5ff&text_color=94a3b8&icon_color=a855f7&border_color=1e293b&hide_border=false" alt="GHisDW GitHub Stats" height="175" />
+  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=GHisDW&layout=compact&theme=transparent&bg_color=00000000&title_color=00f5ff&text_color=94a3b8&border_color=1e293b&hide_border=false" alt="Top Languages" height="175" />
 </p>
 
 <p align="center">
@@ -117,17 +134,21 @@ Rather than sharing files and configs across installations, every instance maint
 </p>
 
 <p align="center">
-  <img src="assets/wave-divider.svg" width="100%" alt="Wave Divider" />
+  <img src="assets/cyber-divider.svg" width="100%" alt="Cyber Divider" />
 </p>
 
-## Connect
+### ❯ connect
 
 <p align="center">
   <a href="https://github.com/GHisDW">
-    <img src="https://img.shields.io/badge/GitHub-Profile-38bdf8?style=flat-square&logo=github&logoColor=white" alt="GitHub Profile" />
+    <img src="https://img.shields.io/badge/GitHub-Profile-00f5ff?style=flat-square&logo=github&logoColor=050814" alt="GitHub Profile" />
   </a>
-  <img src="https://img.shields.io/badge/Discord-DisGamerWorld-818cf8?style=flat-square&logo=discord&logoColor=white" alt="Discord Identity" />
+  <img src="https://img.shields.io/badge/Discord-DisGamerWorld-a855f7?style=flat-square&logo=discord&logoColor=white" alt="Discord Identity" />
   <a href="https://github.com/GHisDW/voxelplus">
-    <img src="https://img.shields.io/badge/Project-Voxel%E2%81%BA-a78bfa?style=flat-square&logo=electron&logoColor=white" alt="Voxel Plus Project" />
+    <img src="https://img.shields.io/badge/Project-Voxel%E2%81%BA-38bdf8?style=flat-square&logo=electron&logoColor=white" alt="Voxel Plus Project" />
   </a>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:091428,100:050814&height=120&section=footer&text=%3E%20session_terminated&fontSize=22&fontColor=00f5ff" width="100%" alt="Footer" />
 </p>

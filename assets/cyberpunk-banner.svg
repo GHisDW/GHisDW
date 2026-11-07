@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="100%" height="auto">
+  <defs>
+    <!-- Background Canvas -->
+    <linearGradient id="bgCanvas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="45%" stop-color="#0a0f24"/>
+      <stop offset="85%" stop-color="#070b1a"/>
+      <stop offset="100%" stop-color="#03050c"/>
+    </linearGradient>
+
+    <!-- Neon Cyan Gradient -->
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+
+    <!-- Purple Accent Gradient -->
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+
+    <!-- Cyber Glitch / Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle Scanlines Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.2" opacity="0.35"/>
+    </pattern>
+
+    <!-- Cyber Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .mono {
+      font-family: 'Courier New', Courier, monospace, 'Fira Code', 'JetBrains Mono', Consolas;
+    }
+    .sans {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', Helvetica, Arial, sans-serif;
+    }
+    .glitch-text {
+      font-weight: 800;
+      font-size: 38px;
+      letter-spacing: 2px;
+      fill: #ffffff;
+    }
+    .cyber-sub {
+      font-size: 14px;
+      letter-spacing: 1px;
+      fill: #94a3b8;
+    }
+    .tag-text {
+      font-size: 11px;
+      letter-spacing: 1px;
+      font-weight: 700;
+      fill: #00f3ff;
+      text-transform: uppercase;
+    }
+    .telemetry {
+      font-size: 11px;
+      letter-spacing: 0.8px;
+      fill: #64748b;
+    }
+    .pulse-dot {
+      animation: pulse 2s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(0.95); }
+      50% { opacity: 1; transform: scale(1.1); }
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="960" height="260" rx="14" fill="url(#bgCanvas)"/>
+  <rect width="960" height="260" rx="14" fill="url(#grid)"/>
+
+  <!-- Glowing Perimeter HUD Frame -->
+  <rect x="15" y="15" width="930" height="230" rx="10" fill="none" stroke="#1e293b" stroke-width="1"/>
+  <rect x="15" y="15" width="930" height="230" rx="10" fill="none" stroke="url(#neonCyan)" stroke-width="1.2" stroke-dasharray="140 30 60 40 400 20 80 50" opacity="0.8"/>
+
+  <!-- Top Cyber Telemetry Bar -->
+  <g transform="translate(35, 36)" class="mono telemetry">
+    <text x="0" y="0">SYS.KERNEL: <tspan fill="#38bdf8">ONLINE</tspan> // NET.PORT: <tspan fill="#00f3ff">2077</tspan> // PROTOCOL: <tspan fill="#a855f7">SECURE</tspan></text>
+    <text x="760" y="0" text-anchor="end">LOC: GITHUB://GHISDW</text>
+  </g>
+
+  <!-- Top Right Status Pill -->
+  <g transform="translate(740, 24)">
+    <rect width="180" height="24" rx="4" fill="#030712" stroke="#00f3ff" stroke-width="0.8" opacity="0.9"/>
+    <circle cx="14" cy="12" r="3.5" fill="#00f3ff" class="pulse-dot"/>
+    <text x="26" y="16" class="mono tag-text">CORE OPERATIONAL</text>
+  </g>
+
+  <!-- Decorative Corner HUD Brackets -->
+  <!-- Top-Left -->
+  <path d="M 22 35 L 22 22 L 35 22" fill="none" stroke="#00f3ff" stroke-width="2.5"/>
+  <!-- Top-Right -->
+  <path d="M 938 35 L 938 22 L 925 22" fill="none" stroke="#00f3ff" stroke-width="2.5"/>
+  <!-- Bottom-Left -->
+  <path d="M 22 225 L 22 238 L 35 238" fill="none" stroke="#a855f7" stroke-width="2.5"/>
+  <!-- Bottom-Right -->
+  <path d="M 938 225 L 938 238 L 925 238" fill="none" stroke="#a855f7" stroke-width="2.5"/>
+
+  <!-- Central Identity Header -->
+  <g transform="translate(48, 106)">
+    <!-- Terminal Prompt Glyphs -->
+    <text x="0" y="0" class="mono" font-size="28" font-weight="800" fill="#00f3ff">&gt;</text>
+    <!-- Glitch Underlayer (Red/Pink Offset) -->
+    <text x="25" y="-1" class="mono glitch-text" fill="#ff0055" opacity="0.4">GHISDW / peakcoder</text>
+    <!-- Glitch Underlayer (Cyan Offset) -->
+    <text x="21" y="1" class="mono glitch-text" fill="#00f3ff" opacity="0.6">GHISDW / peakcoder</text>
+    <!-- Main Header -->
+    <text x="23" y="0" class="mono glitch-text">GHISDW <tspan fill="#38bdf8" font-size="24" font-weight="400">/ peakcoder</tspan></text>
+
+    <!-- Subtitle / Bio -->
+    <text x="25" y="34" class="sans cyber-sub">Software Developer · Desktop Systems &amp; Automation Engineer</text>
+    <text x="25" y="58" class="mono telemetry">CORE: <tspan fill="#00f3ff">Node.js</tspan> + <tspan fill="#38bdf8">Python</tspan> // ECOSYSTEM: <tspan fill="#e2e8f0">Electron · TypeScript · Discord API · Fabric</tspan></text>
+  </g>
+
+  <!-- Cyber Badge Cards on Right Side -->
+  <g transform="translate(685, 78)">
+    <!-- Card 1: Node.js & Python -->
+    <g transform="translate(0, 0)">
+      <rect width="235" height="36" rx="6" fill="#070d1e" stroke="#1e293b" stroke-width="1"/>
+      <rect width="4" height="36" rx="2" fill="#00f3ff"/>
+      <text x="16" y="18" class="mono" font-size="10" fill="#64748b" font-weight="700">PRIMARY_STACK</text>
+      <text x="16" y="30" class="mono" font-size="12" fill="#38bdf8" font-weight="700">Node.js &amp; Python</text>
+    </g>
+
+    <!-- Card 2: Electron & TypeScript -->
+    <g transform="translate(0, 46)">
+      <rect width="235" height="36" rx="6" fill="#070d1e" stroke="#1e293b" stroke-width="1"/>
+      <rect width="4" height="36" rx="2" fill="#a855f7"/>
+      <text x="16" y="18" class="mono" font-size="10" fill="#64748b" font-weight="700">DESKTOP_DEV</text>
+      <text x="16" y="30" class="mono" font-size="12" fill="#c084fc" font-weight="700">Electron + TypeScript</text>
+    </g>
+
+    <!-- Card 3: Flagship Project Voxel+ -->
+    <g transform="translate(0, 92)">
+      <rect width="235" height="36" rx="6" fill="#070d1e" stroke="#1e293b" stroke-width="1"/>
+      <rect width="4" height="36" rx="2" fill="#10b981"/>
+      <text x="16" y="18" class="mono" font-size="10" fill="#64748b" font-weight="700">FLAGSHIP_SYSTEM</text>
+      <text x="16" y="30" class="mono" font-size="12" fill="#34d399" font-weight="700">Voxel⁺ Launcher</text>
+    </g>
+  </g>
+
+  <!-- Bottom Terminal Status Bar -->
+  <g transform="translate(48, 230)" class="mono telemetry">
+    <text x="0" y="0">INTERFACE: <tspan fill="#34d399">ONLINE</tspan> · LATENCY: <tspan fill="#e2e8f0">14ms</tspan> · TERMINAL: <tspan fill="#38bdf8">CYBERPUNK_TTY0</tspan></text>
+  </g>
+
+  <!-- Overlay Scanlines Layer -->
+  <rect width="960" height="260" rx="14" fill="url(#scanlines)" pointer-events="none"/>
+</svg>

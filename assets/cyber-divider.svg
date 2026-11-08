@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 36" width="100%" height="auto">
+  <defs>
+    <!-- Cyberpunk Gradient: Cyan to Purple to Dark Navy -->
+    <linearGradient id="cyberLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#00f0ff" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.9"/>
+      <stop offset="85%" stop-color="#ec4899" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Glowing Pulse Gradient -->
+    <linearGradient id="pulseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Subtle Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .grid-pulse {
+      animation: pulseMotion 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    .hud-bracket {
+      fill: none;
+      stroke: #00f0ff;
+      stroke-width: 1.5;
+    }
+    .hud-node {
+      fill: #090d16;
+      stroke: #00f0ff;
+      stroke-width: 1.5;
+    }
+    .circuit-track {
+      stroke: #1e293b;
+      stroke-width: 1;
+      stroke-dasharray: 4, 8;
+    }
+    @keyframes pulseMotion {
+      0% {
+        transform: translateX(-400px);
+        opacity: 0;
+      }
+      20% {
+        opacity: 0.8;
+      }
+      80% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <!-- Background Circuit Track -->
+  <line x1="80" y1="18" x2="880" y2="18" class="circuit-track"/>
+
+  <!-- Main Neon Cyber Line -->
+  <line x1="120" y1="18" x2="840" y2="18" stroke="url(#cyberLineGrad)" stroke-width="1.8" filter="url(#neonGlow)"/>
+
+  <!-- Left Cyberpunk HUD Bracket -->
+  <path d="M 120,8 L 105,18 L 120,28" class="hud-bracket"/>
+  <circle cx="95" cy="18" r="3" class="hud-node"/>
+  <circle cx="80" cy="18" r="1.5" fill="#38bdf8"/>
+
+  <!-- Center Hexagonal Node / HUD Terminal Diamond -->
+  <g transform="translate(480, 18)">
+    <polygon points="0,-7 8,0 0,7 -8,0" class="hud-node" filter="url(#neonGlow)"/>
+    <circle cx="0" cy="0" r="2.5" fill="#00f0ff"/>
+  </g>
+
+  <!-- Right Cyberpunk HUD Bracket -->
+  <path d="M 840,8 L 855,18 L 840,28" class="hud-bracket" stroke="#a855f7"/>
+  <circle cx="865" cy="18" r="3" class="hud-node" stroke="#a855f7"/>
+  <circle cx="880" cy="18" r="1.5" fill="#a855f7"/>
+
+  <!-- Animated Data Pulse across the rail -->
+  <g transform="translate(480, 18)">
+    <ellipse cx="0" cy="0" rx="60" ry="1.5" fill="url(#pulseGrad)" class="grid-pulse" filter="url(#neonGlow)"/>
+  </g>
+</svg>

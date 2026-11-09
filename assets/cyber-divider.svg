@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 36" width="100%" height="auto">
+  <defs>
+    <linearGradient id="divCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#38bdf8" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.9"/>
+      <stop offset="80%" stop-color="#818cf8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="divPurple" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#a855f7" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .pulse-dot {
+      animation: pulseAnim 3s ease-in-out infinite alternate;
+    }
+    .laser-track {
+      animation: laserTravel 5s linear infinite;
+    }
+    @keyframes pulseAnim {
+      0% { opacity: 0.4; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1.1); filter: drop-shadow(0 0 5px #38bdf8); }
+    }
+    @keyframes laserTravel {
+      0% { transform: translateX(-200px); }
+      100% { transform: translateX(1000px); }
+    }
+  </style>
+
+  <!-- Ambient background glow line -->
+  <line x1="40" y1="18" x2="920" y2="18" stroke="#0e172a" stroke-width="2"/>
+
+  <!-- Dual Laser Circuit Lines -->
+  <line x1="80" y1="18" x2="880" y2="18" stroke="url(#divCyan)" stroke-width="1.8"/>
+  <line x1="180" y1="21" x2="780" y2="21" stroke="url(#divPurple)" stroke-width="0.8" stroke-dasharray="6,4"/>
+
+  <!-- Left Accent Nodes -->
+  <line x1="80" y1="12" x2="95" y2="18" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.7"/>
+  <rect x="75" y="10" width="4" height="4" fill="#38bdf8" fill-opacity="0.8"/>
+
+  <!-- Center HUD Diamond / Node -->
+  <g transform="translate(480, 18)">
+    <!-- Outer diamond -->
+    <polygon points="0,-9 9,0 0,9 -9,0" fill="#090e1a" stroke="#38bdf8" stroke-width="1.2"/>
+    <!-- Inner diamond pulse -->
+    <polygon points="0,-4 4,0 0,4 -4,0" fill="#38bdf8" class="pulse-dot"/>
+    <!-- Lateral ticks -->
+    <line x1="-20" y1="0" x2="-13" y2="0" stroke="#818cf8" stroke-width="1.5"/>
+    <line x1="13" y1="0" x2="20" y2="0" stroke="#818cf8" stroke-width="1.5"/>
+  </g>
+
+  <!-- Right Accent Nodes -->
+  <line x1="880" y1="12" x2="865" y2="18" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.7"/>
+  <rect x="881" y="10" width="4" height="4" fill="#818cf8" fill-opacity="0.8"/>
+</svg>

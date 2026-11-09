@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 260" width="100%" height="auto">
+  <defs>
+    <!-- Background Canvas Gradient -->
+    <linearGradient id="cyberBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="45%" stop-color="#0a0f1d"/>
+      <stop offset="100%" stop-color="#070a14"/>
+    </linearGradient>
+
+    <!-- Terminal Inner Gradient -->
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1424" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#070b16" stop-opacity="0.98"/>
+    </linearGradient>
+
+    <!-- Cyber Neon Cyan / Purple Gradients -->
+    <linearGradient id="neonCyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="neonBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <!-- Ambient Glow Orbs -->
+    <radialGradient id="cyanGlow" cx="15%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="purpleGlow" cx="85%" cy="70%" r="55%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100%" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#000000" stroke-opacity="0.28" stroke-width="1.2"/>
+    </pattern>
+
+    <!-- Digital Grid Pattern -->
+    <pattern id="cyberGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#38bdf8" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .font-mono {
+      font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    .title-name {
+      font-weight: 800;
+      font-size: 36px;
+      letter-spacing: -0.5px;
+      fill: #ffffff;
+    }
+    .title-handle {
+      font-weight: 400;
+      font-size: 24px;
+      fill: #38bdf8;
+      letter-spacing: 0px;
+    }
+    .term-meta {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      fill: #94a3b8;
+    }
+    .term-desc {
+      font-size: 14.5px;
+      line-height: 1.5;
+      fill: #cbd5e1;
+    }
+    .term-highlight {
+      font-weight: 600;
+      fill: #38bdf8;
+    }
+    .badge-text {
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      fill: #f1f5f9;
+    }
+    .glitch-bar {
+      animation: pulseGlitch 4s ease-in-out infinite;
+    }
+    .scan-beam {
+      animation: scanMove 8s linear infinite;
+    }
+    .cursor-blink {
+      animation: blink 1.1s steps(2, start) infinite;
+    }
+    @keyframes pulseGlitch {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; filter: drop-shadow(0 0 6px #38bdf8); }
+    }
+    @keyframes scanMove {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(260px); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+
+  <!-- Base Canvas -->
+  <rect width="960" height="260" rx="14" fill="url(#cyberBg)"/>
+  <rect width="960" height="260" rx="14" fill="url(#cyberGrid)"/>
+
+  <!-- Ambient Glows -->
+  <rect width="960" height="260" rx="14" fill="url(#cyanGlow)"/>
+  <rect width="960" height="260" rx="14" fill="url(#purpleGlow)"/>
+
+  <!-- Subtle Matrix Scan Beam -->
+  <line x1="0" y1="0" x2="960" y2="0" stroke="#38bdf8" stroke-opacity="0.18" stroke-width="2" class="scan-beam"/>
+
+  <!-- Terminal Window Shell -->
+  <rect x="20" y="18" width="920" height="224" rx="10" fill="url(#termBg)" stroke="url(#neonBorder)" stroke-width="1.2"/>
+
+  <!-- Terminal Top Bar -->
+  <path d="M 20 28 Q 20 18 30 18 L 930 18 Q 940 18 940 28 L 940 48 L 20 48 Z" fill="#090e1a"/>
+  <line x1="20" y1="48" x2="940" y2="48" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Window Controls -->
+  <circle cx="42" cy="33" r="5" fill="#ef4444" fill-opacity="0.85"/>
+  <circle cx="58" cy="33" r="5" fill="#eab308" fill-opacity="0.85"/>
+  <circle cx="74" cy="33" r="5" fill="#10b981" fill-opacity="0.85"/>
+
+  <!-- Terminal Window Label -->
+  <text x="96" y="37" class="font-mono term-meta">SYSTEM://PROFILE/GHisDW.SYS — NODE:ONLINE [CYBER_TERMINAL_V2]</text>
+
+  <!-- Right Status Indicator -->
+  <g transform="translate(815, 26)">
+    <rect width="105" height="15" rx="3" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.4" stroke-width="0.8"/>
+    <circle cx="823" cy="33.5" r="3" fill="#10b981" class="glitch-bar"/>
+    <text x="831" y="34.5" class="font-mono" font-size="9" font-weight="700" fill="#34d399">SECURITY: OK</text>
+  </g>
+
+  <!-- Scanline Overlay on Terminal Body -->
+  <rect x="21" y="49" width="918" height="192" rx="0" fill="url(#scanlines)" pointer-events="none"/>
+
+  <!-- Main Terminal Content -->
+  <g transform="translate(50, 78)">
+    <!-- Terminal Prompt Line -->
+    <text x="0" y="16" class="font-mono" font-size="13" fill="#818cf8">
+      <tspan fill="#38bdf8">root@peakcoder</tspan>:<tspan fill="#a78bfa">~/workspace</tspan>$ <tspan fill="#e2e8f0">./init_identity.sh --target=production</tspan>
+    </text>
+
+    <!-- Main Title with Cyberpunk Accents -->
+    <text x="0" y="56" class="font-sans title-name">
+      GHisDW <tspan class="font-mono title-handle">/ peakcoder</tspan>
+    </text>
+
+    <!-- Subtitle / Terminal Dossier -->
+    <text x="0" y="86" class="font-sans term-desc">
+      Software engineer specializing in <tspan class="term-highlight">Node.js</tspan> and <tspan class="term-highlight">Python</tspan> systems, desktop tools, and developer automation.
+    </text>
+    <text x="0" y="108" class="font-sans term-desc" fill="#94a3b8">
+      Architect of <tspan fill="#f1f5f9" font-weight="600">Voxel⁺</tspan> (Electron + TypeScript launcher) · Discord bots · Minecraft tooling
+    </text>
+
+    <!-- Terminal Cursor -->
+    <rect x="585" y="96" width="8" height="14" fill="#38bdf8" class="cursor-blink"/>
+  </g>
+
+  <!-- Right Cyber HUD Telemetry Badges -->
+  <g transform="translate(670, 78)">
+    <!-- HUD Box 1: Core Systems -->
+    <g transform="translate(0, 0)">
+      <rect width="230" height="34" rx="6" fill="#090e1a" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="0.8"/>
+      <path d="M 0 0 L 10 0 L 0 10 Z" fill="#38bdf8"/>
+      <text x="16" y="15" class="font-mono" font-size="9" fill="#94a3b8">PRIMARY CORE</text>
+      <text x="16" y="27" class="font-sans badge-text" fill="#38bdf8">Node.js · Python Engine</text>
+    </g>
+
+    <!-- HUD Box 2: Frameworks -->
+    <g transform="translate(0, 42)">
+      <rect width="230" height="34" rx="6" fill="#090e1a" stroke="#818cf8" stroke-opacity="0.4" stroke-width="0.8"/>
+      <path d="M 0 0 L 10 0 L 0 10 Z" fill="#818cf8"/>
+      <text x="16" y="15" class="font-mono" font-size="9" fill="#94a3b8">RUNTIME / DESKTOP</text>
+      <text x="16" y="27" class="font-sans badge-text" fill="#a78bfa">Electron · TypeScript · Vite</text>
+    </g>
+
+    <!-- HUD Box 3: Flagship Project -->
+    <g transform="translate(0, 84)">
+      <rect width="230" height="34" rx="6" fill="#090e1a" stroke="#10b981" stroke-opacity="0.4" stroke-width="0.8"/>
+      <path d="M 0 0 L 10 0 L 0 10 Z" fill="#10b981"/>
+      <text x="16" y="15" class="font-mono" font-size="9" fill="#94a3b8">FLAGSHIP PROJECT</text>
+      <text x="16" y="27" class="font-sans badge-text" fill="#34d399">Voxel⁺ Minecraft Launcher</text>
+    </g>
+  </g>
+
+  <!-- Bottom Corner Terminal Brackets -->
+  <path d="M 26 230 L 26 236 L 32 236" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+  <path d="M 934 230 L 934 236 L 928 236" fill="none" stroke="#818cf8" stroke-width="1.5"/>
+</svg>

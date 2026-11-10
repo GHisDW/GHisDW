@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 40" width="100%" height="auto">
+  <defs>
+    <linearGradient id="cyberLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#38bdf8" stop-opacity="0.3"/>
+      <stop offset="45%" stop-color="#00f0ff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="55%" stop-color="#a855f7" stop-opacity="0.9"/>
+      <stop offset="85%" stop-color="#a855f7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00f0ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="cyberGlow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .pulse-dot {
+      animation: pulseGlow 2.5s infinite ease-in-out alternate;
+    }
+    .hud-bracket {
+      font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 10px;
+      font-weight: 700;
+      fill: #38bdf8;
+      opacity: 0.7;
+    }
+    .hud-text {
+      font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-size: 8.5px;
+      letter-spacing: 2px;
+      fill: #94a3b8;
+    }
+    @keyframes pulseGlow {
+      0% { opacity: 0.3; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1.1); }
+    }
+  </style>
+
+  <!-- Ambient Horizontal Glow -->
+  <rect x="180" y="18" width="600" height="4" fill="url(#glowGrad)" filter="url(#cyberGlow)"/>
+
+  <!-- Main Cyber Axis Line -->
+  <line x1="60" y1="20" x2="900" y2="20" stroke="url(#cyberLineGrad)" stroke-width="1.6"/>
+
+  <!-- Left HUD Marker -->
+  <g transform="translate(60, 20)">
+    <line x1="0" y1="-7" x2="0" y2="7" stroke="#38bdf8" stroke-width="1.8"/>
+    <circle cx="0" cy="0" r="2.5" fill="#00f0ff" class="pulse-dot"/>
+    <polygon points="6,-4 12,0 6,4" fill="#38bdf8" opacity="0.6"/>
+  </g>
+
+  <!-- Center Hex/Diamond Node -->
+  <g transform="translate(480, 20)">
+    <polygon points="0,-7 8,0 0,7 -8,0" fill="#0b1329" stroke="#00f0ff" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="2" fill="#ffffff" class="pulse-dot"/>
+    <text x="0" y="-10" text-anchor="middle" class="hud-text">SYS.NODE//01</text>
+  </g>
+
+  <!-- Right HUD Marker -->
+  <g transform="translate(900, 20)">
+    <line x1="0" y1="-7" x2="0" y2="7" stroke="#a855f7" stroke-width="1.8"/>
+    <circle cx="0" cy="0" r="2.5" fill="#c084fc" class="pulse-dot"/>
+    <polygon points="-6,-4 -12,0 -6,4" fill="#a855f7" opacity="0.6"/>
+  </g>
+</svg>

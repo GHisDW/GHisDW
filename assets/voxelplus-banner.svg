@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="100%" height="auto" fill="none">
+  <defs>
+    <!-- Card Frame Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080e1c"/>
+      <stop offset="50%" stop-color="#050a14"/>
+      <stop offset="100%" stop-color="#03060c"/>
+    </linearGradient>
+
+    <!-- Cyber Circuit Border Gradient -->
+    <linearGradient id="cyberBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="cyberGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Feature Chip Background -->
+    <linearGradient id="chipBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e172a" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0a0f1d" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#00f0ff" stroke-width="0.75" stroke-opacity="0.04"/>
+    </pattern>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" stroke-width="0.5" stroke-opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Courier New', monospace;
+      font-weight: 900;
+      font-size: 34px;
+      letter-spacing: 2px;
+      fill: #ffffff;
+    }
+    .badge-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Courier New', monospace;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      fill: #00f0ff;
+    }
+    .desc-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      fill: #94a3b8;
+    }
+    .code-term {
+      font-family: 'SF Mono', Monaco, 'Fira Code', 'Courier New', monospace;
+      font-size: 12px;
+      fill: #38bdf8;
+    }
+    .feature-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace;
+      font-weight: 700;
+      font-size: 13px;
+      fill: #f1f5f9;
+    }
+    .feature-sub {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      fill: #64748b;
+    }
+  </style>
+
+  <!-- Main Chassis -->
+  <g id="chassis">
+    <!-- Card Base -->
+    <rect x="2" y="2" width="956" height="296" rx="14" fill="url(#cardBg)"/>
+    <!-- Grid Overlay -->
+    <rect x="2" y="2" width="956" height="296" rx="14" fill="url(#cyberGrid)"/>
+    <!-- Scanline Layer -->
+    <rect x="2" y="2" width="956" height="296" rx="14" fill="url(#scanlines)"/>
+    <!-- Cyber Outer Border -->
+    <rect x="2" y="2" width="956" height="296" rx="14" stroke="url(#cyberBorder)" stroke-width="1.5" stroke-opacity="0.8"/>
+  </g>
+
+  <!-- Cybernetic Corner Cut Accents -->
+  <path d="M 2 26 L 2 14 Q 2 2 14 2 L 32 2" stroke="#00f0ff" stroke-width="3" fill="none" filter="url(#cyberGlow)"/>
+  <path d="M 928 2 L 946 2 Q 958 2 958 14 L 958 32" stroke="#a855f7" stroke-width="3" fill="none" filter="url(#cyberGlow)"/>
+  <path d="M 2 274 L 2 286 Q 2 298 14 298 L 32 298" stroke="#38bdf8" stroke-width="3" fill="none"/>
+  <path d="M 928 298 L 946 298 Q 958 298 958 286 L 958 274" stroke="#00f0ff" stroke-width="3" fill="none"/>
+
+  <!-- Top Terminal Bar -->
+  <g id="topbar">
+    <line x1="2" y1="42" x2="958" y2="42" stroke="#1e293b" stroke-width="1"/>
+    <!-- Terminal Dots -->
+    <circle cx="26" cy="22" r="4" fill="#ef4444" opacity="0.8"/>
+    <circle cx="42" cy="22" r="4" fill="#eab308" opacity="0.8"/>
+    <circle cx="58" cy="22" r="4" fill="#22c55e" opacity="0.8"/>
+
+    <text x="80" y="26" class="code-term">SYSTEM:://VOXELPLUS_CORE_ARCHITECTURE.v1.2.0</text>
+
+    <!-- Status Indicator Pill -->
+    <rect x="800" y="12" width="134" height="20" rx="10" fill="#00f0ff" fill-opacity="0.1" stroke="#00f0ff" stroke-width="1"/>
+    <circle cx="814" cy="22" r="3" fill="#00f0ff" filter="url(#cyberGlow)"/>
+    <text x="826" y="26" class="badge-text" fill="#00f0ff">ACTIVE_RELEASE</text>
+  </g>
+
+  <!-- Left Column: Branding and Overview -->
+  <g id="brand-column" transform="translate(36, 68)">
+    <!-- App Title with Glowing Plus -->
+    <text x="0" y="32" class="title-text">VOXEL<tspan fill="#00f0ff" filter="url(#cyberGlow)">⁺</tspan></text>
+
+    <!-- Subtitle Pill -->
+    <rect x="156" y="10" width="168" height="24" rx="4" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1"/>
+    <text x="166" y="26" class="code-term" fill="#a855f7">ELECTRON + TYPESCRIPT</text>
+
+    <!-- Core Pitch -->
+    <text x="0" y="64" class="desc-text">Next-gen desktop launcher engineered for isolated, high-performance</text>
+    <text x="0" y="86" class="desc-text">singleplayer Minecraft instance management and mod ecosystem discovery.</text>
+
+    <!-- Mod Loaders Tag Row -->
+    <g transform="translate(0, 108)">
+      <!-- Fabric -->
+      <rect x="0" y="0" width="80" height="26" rx="5" fill="#0f172a" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.7"/>
+      <text x="17" y="17" class="code-term" fill="#00f0ff">Fabric</text>
+      <!-- Quilt -->
+      <rect x="88" y="0" width="74" height="26" rx="5" fill="#0f172a" stroke="#a855f7" stroke-width="1" stroke-opacity="0.7"/>
+      <text x="105" y="17" class="code-term" fill="#a855f7">Quilt</text>
+      <!-- Forge -->
+      <rect x="170" y="0" width="76" height="26" rx="5" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.7"/>
+      <text x="187" y="17" class="code-term" fill="#38bdf8">Forge</text>
+      <!-- NeoForge -->
+      <rect x="254" y="0" width="98" height="26" rx="5" fill="#0f172a" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.7"/>
+      <text x="268" y="17" class="code-term" fill="#f59e0b">NeoForge</text>
+    </g>
+
+    <!-- Terminal Command Line -->
+    <g transform="translate(0, 154)">
+      <rect x="0" y="0" width="370" height="32" rx="6" fill="#040812" stroke="#1e293b" stroke-width="1"/>
+      <text x="14" y="20" class="code-term" fill="#64748b">$ <tspan fill="#f1f5f9">git clone https://github.com/GHisDW/voxelplus</tspan></text>
+    </g>
+  </g>
+
+  <!-- Right Column: 4 Architecture Feature Modules -->
+  <g id="feature-grid" transform="translate(480, 64)">
+
+    <!-- Feature 1: Instance Isolation -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="210" height="96" rx="8" fill="url(#chipBg)" stroke="#1e293b" stroke-width="1"/>
+      <path d="M 0 10 L 0 0 L 10 0" stroke="#00f0ff" stroke-width="2" fill="none"/>
+      <!-- Icon Shield -->
+      <circle cx="26" cy="28" r="14" fill="#00f0ff" fill-opacity="0.15"/>
+      <text x="20" y="33" font-size="14" fill="#00f0ff">🛡️</text>
+      <text x="48" y="24" class="feature-title">Isolated Instances</text>
+      <text x="48" y="38" class="code-term" font-size="10" fill="#00f0ff">ZERO CROSS-TALK</text>
+      <text x="14" y="64" class="feature-sub">Dedicated configs, saves, mods</text>
+      <text x="14" y="80" class="feature-sub">&amp; Loom/Gradle environments</text>
+    </g>
+
+    <!-- Feature 2: Offline-First Engine -->
+    <g transform="translate(230, 0)">
+      <rect x="0" y="0" width="210" height="96" rx="8" fill="url(#chipBg)" stroke="#1e293b" stroke-width="1"/>
+      <path d="M 0 10 L 0 0 L 10 0" stroke="#38bdf8" stroke-width="2" fill="none"/>
+      <!-- Icon Lightning -->
+      <circle cx="26" cy="28" r="14" fill="#38bdf8" fill-opacity="0.15"/>
+      <text x="20" y="33" font-size="14" fill="#38bdf8">⚡</text>
+      <text x="48" y="24" class="feature-title">Offline Execution</text>
+      <text x="48" y="38" class="code-term" font-size="10" fill="#38bdf8">100% LOCAL RUN</text>
+      <text x="14" y="64" class="feature-sub">Prepares and launches instances</text>
+      <text x="14" y="80" class="feature-sub">offline once assets are cached</text>
+    </g>
+
+    <!-- Feature 3: Mod Discovery & Packs -->
+    <g transform="translate(0, 114)">
+      <rect x="0" y="0" width="210" height="96" rx="8" fill="url(#chipBg)" stroke="#1e293b" stroke-width="1"/>
+      <path d="M 0 10 L 0 0 L 10 0" stroke="#a855f7" stroke-width="2" fill="none"/>
+      <!-- Icon Package -->
+      <circle cx="26" cy="28" r="14" fill="#a855f7" fill-opacity="0.15"/>
+      <text x="20" y="33" font-size="14" fill="#a855f7">📦</text>
+      <text x="48" y="24" class="feature-title">Mod Discovery</text>
+      <text x="48" y="38" class="code-term" font-size="10" fill="#a855f7">MODRINTH INTEGRATION</text>
+      <text x="14" y="64" class="feature-sub">Browse, install &amp; convert</text>
+      <text x="14" y="80" class="feature-sub">Modrinth packs (.mrpack / .vpack)</text>
+    </g>
+
+    <!-- Feature 4: Runtime Resolver -->
+    <g transform="translate(230, 114)">
+      <rect x="0" y="0" width="210" height="96" rx="8" fill="url(#chipBg)" stroke="#1e293b" stroke-width="1"/>
+      <path d="M 0 10 L 0 0 L 10 0" stroke="#00ff66" stroke-width="2" fill="none"/>
+      <!-- Icon Java/Gear -->
+      <circle cx="26" cy="28" r="14" fill="#00ff66" fill-opacity="0.15"/>
+      <text x="20" y="33" font-size="14" fill="#00ff66">⚙️</text>
+      <text x="48" y="24" class="feature-title">Runtime Resolver</text>
+      <text x="48" y="38" class="code-term" font-size="10" fill="#00ff66">JAVA 8 → 25 AUTODETECT</text>
+      <text x="14" y="64" class="feature-sub">Matches JDKs automatically;</text>
+      <text x="14" y="80" class="feature-sub">streams live Gradle diagnostics</text>
+    </g>
+
+  </g>
+</svg>
